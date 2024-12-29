@@ -28,7 +28,7 @@ export async function POST(request) {
         // Email template
         const mailOptions = {
             from: process.env.RSEND_USERNAME,
-            to: 'dabhivijay2478@gmail.com', // Replace with your target email
+            to: 'realcadelifescience@gmail.com', // Replace with your target email
             subject: `New Contact Form Submission from ${firstName} ${lastName}`,
             html: `
                 <!DOCTYPE html>
