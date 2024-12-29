@@ -87,7 +87,7 @@ export default function AboutUs() {
                             className="lg:w-1/2"
                             variants={fadeInFromLeft}
                         >
-                            <h1 className="text-4xl font-bold text-emerald-800 mb-6">Welcome to Real Cade Life Science</h1>
+                            <h1 className="text-4xl font-bold text-emerald-800 mb-6">Welcome to  RealCade LifeScience</h1>
                             <div className="space-y-4 text-gray-700">
                                 <p>Realcade Lifescience Pvt. Ltd., located in Kadi-Mehsana (Gujarat-India) has up-coming as India&39;s most versatile manufacturer of sterile liquids in Aseptic Form – Fill – Seal (FFS) Technology.</p>
                                 <p>Our capabilities include manufacturing IV Fluids in 100 ml & 500 ml volumes. Our product range includes Formulations, Fluid Therapy, Respiratory Solutions, Diluents and Injections.</p>
