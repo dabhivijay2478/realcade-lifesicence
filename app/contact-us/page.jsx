@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { MailIcon, MapPinIcon, PhoneIcon, ClockIcon, UserIcon, CheckCircle2, ArrowRight, ChevronsLeftRight, ChevronRight } from "lucide-react";
+import { MailIcon, MapPinIcon, PhoneIcon, ClockIcon, UserIcon, CheckCircle2, ArrowRight, ChevronsLeftRight, ChevronRight, Loader2, AlertCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import Link from "next/link";
@@ -106,14 +106,53 @@ const OfficeCard = ({ title, person, phone, email, address, hours }) => (
 
 const Contact02Page = () => {
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState(null);
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
     const onSubmit = async (data) => {
-        // Simulated form submission
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        setIsSubmitted(true);
-        reset();
-        setTimeout(() => setIsSubmitted(false), 5000);
+        try {
+            setIsLoading(true);
+            setError(null);
+
+            const response = await fetch('/api/send-mail', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    firstName: data.firstName,
+                    lastName: data.lastName,
+                    email: data.email,
+                    message: data.message
+                })
+            });
+
+            // First check if the response is JSON
+            const contentType = response.headers.get("content-type");
+            if (!contentType || !contentType.includes("application/json")) {
+                throw new Error("Server error: Invalid response format");
+            }
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(result.message || 'Something went wrong');
+            }
+
+            setIsSubmitted(true);
+            reset();
+            setTimeout(() => setIsSubmitted(false), 5000);
+        } catch (err) {
+            console.error('Form submission error:', err);
+            if (err.message === "Server error: Invalid response format") {
+                setError("Server error: Please try again later");
+            } else {
+                setError(err.message || "Failed to submit form. Please try again.");
+            }
+        } finally {
+            setIsLoading(false);
+        }
     };
 
     return (
@@ -250,7 +289,7 @@ const Contact02Page = () => {
                     viewport={{ once: true }}
                 >
                     <h2 className="text-2xl md:text-3xl font-bold mb-8">Send us a Message</h2>
-                    <Card className=" shadow-xl">
+                    <Card className="shadow-xl">
                         <CardContent className="p-6 md:p-10">
                             {isSubmitted && (
                                 <motion.div
@@ -261,12 +300,28 @@ const Contact02Page = () => {
                                     <Alert className="bg-green-50 border-green-200">
                                         <CheckCircle2 className="h-4 w-4 text-green-600" />
                                         <AlertDescription className="text-green-600">
-                                            Thank you for your message! We&apos;ll get back to you soon.
+                                            Thank you for your message! We&#39;ll get back to you soon.
                                         </AlertDescription>
                                     </Alert>
                                 </motion.div>
                             )}
-                            <form onSubmit={handleSubmit(onSubmit)}>
+
+                            {error && (
+                                <motion.div
+                                    initial={{ opacity: 0, y: -20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    className="mb-6"
+                                >
+                                    <Alert variant="destructive">
+                                        <AlertCircle className="h-4 w-4" />
+                                        <AlertDescription>
+                                            {error}
+                                        </AlertDescription>
+                                    </Alert>
+                                </motion.div>
+                            )}
+
+                            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                                 <div className="grid md:grid-cols-2 gap-x-8 gap-y-5">
                                     <div className="col-span-2 sm:col-span-1">
                                         <Label htmlFor="firstName">First Name</Label>
@@ -332,11 +387,19 @@ const Contact02Page = () => {
                                     whileTap={{ scale: 0.99 }}
                                 >
                                     <Button
-                                        className="mt-6 w-full bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary transition-all duration-300"
+                                        className="w-full bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary transition-all duration-300"
                                         size="lg"
                                         type="submit"
+                                        disabled={isLoading}
                                     >
-                                        Submit
+                                        {isLoading ? (
+                                            <>
+                                                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                                                Sending...
+                                            </>
+                                        ) : (
+                                            'Submit'
+                                        )}
                                     </Button>
                                 </motion.div>
                             </form>
