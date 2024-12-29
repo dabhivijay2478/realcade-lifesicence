@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Phone, Mail, MapPin, Clock } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
 import logo from "@/Images/logo.png";
-
+import { usePathname } from "next/navigation";
 const productItems = [
   { name: "I.V. Fluids", href: "/products/IVfluids" }
 ];
@@ -81,6 +81,7 @@ const DropdownMenu = ({ items, isOpen, onMouseEnter, onMouseLeave }) => (
 );
 
 const Navbar = () => {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -100,6 +101,17 @@ const Navbar = () => {
     document.addEventListener('click', handleClickOutside);
     return () => document.removeEventListener('click', handleClickOutside);
   }, [mobileMenuOpen]);
+
+  const isLinkActive = (href) => {
+    if (href === '/') {
+      return pathname === href;
+    }
+    return pathname.startsWith(href);
+  };
+
+  const isDropdownActive = (items) => {
+    return items.some(item => isLinkActive(item.href));
+  };
 
   return (
     <div className="fixed w-full top-0 z-50">
@@ -171,48 +183,57 @@ const Navbar = () => {
 
             {/* Desktop Menu */}
             <div className="hidden lg:flex items-center gap-8">
-              {navItems.map((item) => (
-                <motion.div
-                  key={item.name}
-                  className="relative"
-                  onMouseEnter={() => item.hasDropdown && setOpenDropdown(item.name)}
-                  onMouseLeave={() => setOpenDropdown(null)}
-                >
+              {navItems.map((item) => {
+                const isActive = item.hasDropdown
+                  ? isDropdownActive(item.items)
+                  : isLinkActive(item.href);
+
+                return (
                   <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex items-center gap-1 cursor-pointer"
+                    key={item.name}
+                    className="relative"
+                    onMouseEnter={() => item.hasDropdown && setOpenDropdown(item.name)}
+                    onMouseLeave={() => setOpenDropdown(null)}
                   >
-                    {item.hasDropdown ? (
-                      <span className="text-foreground/70 hover:text-primary transition-colors duration-300 font-medium">
-                        {item.name}
-                        <motion.span
-                          animate={{ rotate: openDropdown === item.name ? 180 : 0 }}
-                          transition={{ duration: 0.3 }}
-                          className="inline-block ml-1"
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="flex items-center gap-1 cursor-pointer"
+                    >
+                      {item.hasDropdown ? (
+                        <span className={`transition-colors duration-300 font-medium ${isActive ? 'text-green-500' : 'text-blue-500 hover:text-green-500'
+                          }`}>
+                          {item.name}
+                          <motion.span
+                            animate={{ rotate: openDropdown === item.name ? 180 : 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="inline-block ml-1"
+                          >
+                            <ChevronDown className="h-4 w-4" />
+                          </motion.span>
+                        </span>
+                      ) : (
+                        <Link
+                          href={item.href}
+                          className={`transition-colors duration-300 font-medium ${isActive ? 'text-green-500' : 'text-blue-500 hover:text-green-500'
+                            }`}
                         >
-                          <ChevronDown className="h-4 w-4" />
-                        </motion.span>
-                      </span>
-                    ) : (
-                      <Link
-                        href={item.href}
-                        className="text-foreground/70 hover:text-primary transition-colors duration-300 font-medium"
-                      >
-                        {item.name}
-                      </Link>
+                          {item.name}
+                        </Link>
+                      )}
+                    </motion.div>
+                    {item.hasDropdown && (
+                      <DropdownMenu
+                        items={item.items}
+                        isOpen={openDropdown === item.name}
+                        onMouseEnter={() => setOpenDropdown(item.name)}
+                        onMouseLeave={() => setOpenDropdown(null)}
+                        currentPath={pathname}
+                      />
                     )}
                   </motion.div>
-                  {item.hasDropdown && (
-                    <DropdownMenu
-                      items={item.items}
-                      isOpen={openDropdown === item.name}
-                      onMouseEnter={() => setOpenDropdown(item.name)}
-                      onMouseLeave={() => setOpenDropdown(null)}
-                    />
-                  )}
-                </motion.div>
-              ))}
+                );
+              })}
             </div>
 
             {/* Theme Toggle and Mobile Menu Button */}
@@ -262,54 +283,71 @@ const Navbar = () => {
           <AnimatePresence>
             {mobileMenuOpen && (
               <motion.div
-                className="lg:hidden mobile-menu mt-4 overflow-hidden bg-background/95 backdrop-blur-xl rounded-xl border shadow-lg"
+                className="lg:hidden mobile-menu mt-2 overflow-hidden  rounded-xl border shadow-lg"
                 variants={menuVariants}
                 initial="closed"
                 animate="open"
                 exit="closed"
               >
-                <div className="py-4 px-4 space-y-4">
-                  {navItems.map((item) => (
-                    <motion.div
-                      key={item.name}
-                      whileHover={{ x: 4 }}
-                      className="border-b border-border/50 last:border-none"
-                    >
-                      {item.hasDropdown ? (
-                        <div className="py-3">
-                          <span className="text-lg font-medium text-primary">{item.name}</span>
-                          <div className="mt-2 pl-4 space-y-2">
-                            {item.items.map((subItem) => (
-                              <motion.div
-                                key={subItem.name}
-                                whileHover={{ x: 4 }}
-                                className="py-2"
-                              >
-                                <Link
-                                  href={subItem.href}
-                                  className="text-foreground/70 hover:text-primary transition-colors duration-300"
-                                  onClick={() => setMobileMenuOpen(false)}
-                                >
-                                  {subItem.name}
-                                </Link>
-                              </motion.div>
-                            ))}
-                          </div>
-                        </div>
-                      ) : (
-                        <motion.div className="py-3">
-                          <Link
-                            href={item.href}
-                            className="text-lg text-foreground/70 hover:text-primary transition-colors duration-300"
-                            onClick={() => setMobileMenuOpen(false)}
-                          >
-                            {item.name}
-                          </Link>
-                        </motion.div>
-                      )}
-                    </motion.div>
-                  ))}
+                <div className="py-1 px-4 space-y-4">
+                  {navItems.map((item) => {
+                    const isActive = item.hasDropdown
+                      ? isDropdownActive(item.items)
+                      : isLinkActive(item.href);
 
+                    return (
+                      <motion.div
+                        key={item.name}
+                        whileHover={{ x: 4 }}
+                        className="border-b border-border/50 last:border-none"
+                      >
+                        {item.hasDropdown ? (
+                          <div className="py-3">
+                            <span className={`text-lg font-medium ${isActive ? 'text-green-500' : 'text-blue-500 hover:text-green-500'
+                              }`}>
+                              {item.name}
+                            </span>
+                            <div className="mt-2 pl-4 space-y-2">
+                              {item.items.map((subItem) => {
+                                const isSubItemActive = isLinkActive(subItem.href);
+                                return (
+                                  <motion.div
+                                    key={subItem.name}
+                                    whileHover={{ x: 4 }}
+                                    className="py-2"
+                                  >
+                                    <Link
+                                      href={subItem.href}
+                                      className={`transition-colors duration-300 ${isSubItemActive
+                                          ? 'text-green-500'
+                                          : 'text-blue-500 hover:text-green-500'
+                                        }`}
+                                      onClick={() => setMobileMenuOpen(false)}
+                                    >
+                                      {subItem.name}
+                                    </Link>
+                                  </motion.div>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        ) : (
+                          <motion.div className="py-3">
+                            <Link
+                              href={item.href}
+                              className={`text-lg transition-colors duration-300 ${isActive
+                                  ? 'text-green-500'
+                                  : 'text-blue-500 hover:text-green-500'
+                                }`}
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              {item.name}
+                            </Link>
+                          </motion.div>
+                        )}
+                      </motion.div>
+                    );
+                  })}
                   {/* Mobile Contact Info */}
                   <div className="pt-4 space-y-4">
                     {contactInfo.map((item, index) => (

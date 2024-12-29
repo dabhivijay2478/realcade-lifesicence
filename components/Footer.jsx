@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { IconBrandWhatsapp } from '@tabler/icons-react';
+import { usePathname } from "next/navigation";
 
 const footerLinks = [
   { title: "Home", href: "/" },
@@ -47,6 +48,15 @@ const socialLinks = [
 ];
 
 const Footer = () => {
+  const pathname = usePathname();
+
+  const isLinkActive = (href) => {
+    if (href === '/') {
+      return pathname === href;
+    }
+    return pathname.startsWith(href);
+  };
+
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -80,20 +90,26 @@ const Footer = () => {
           <motion.div variants={itemVariants} className="space-y-4">
             <h3 className="text-xl font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-3">
-              {footerLinks.map((link) => (
-                <motion.li
-                  key={link.title}
-                  whileHover={{ x: 5 }}
-                  className="transform transition-transform"
-                >
-                  <Link
-                    href={link.href}
-                    className="text-muted-foreground hover:text-primary transition-colors duration-200"
+              {footerLinks.map((link) => {
+                const isActive = isLinkActive(link.href);
+                return (
+                  <motion.li
+                    key={link.title}
+                    whileHover={{ x: 5 }}
+                    className="transform transition-transform"
                   >
-                    {link.title}
-                  </Link>
-                </motion.li>
-              ))}
+                    <Link
+                      href={link.href}
+                      className={`transition-colors duration-200 ${isActive
+                          ? 'text-green-500 font-medium'
+                          : 'text-blue-500 hover:text-green-500'
+                        }`}
+                    >
+                      {link.title}
+                    </Link>
+                  </motion.li>
+                );
+              })}
             </ul>
           </motion.div>
 
