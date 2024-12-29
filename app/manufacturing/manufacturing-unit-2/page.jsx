@@ -42,24 +42,24 @@ const Unit2Carousel = () => {
     }, []);
 
     const slideVariants = {
-        enter: { opacity: 0, scale: 1.2 },
+        enter: { opacity: 0, scale: 1.1 },
         center: {
             opacity: 1,
             scale: 1,
             transition: {
-                duration: 0.8,
+                duration: 1,
                 ease: "easeOut"
             }
         },
         exit: {
             opacity: 0,
-            scale: 0.8,
-            transition: { duration: 0.4 }
+            scale: 0.95,
+            transition: { duration: 0.5 }
         }
     };
 
     return (
-        <div className="relative h-[70vh] overflow-hidden rounded-2xl mt-10 mx-10">
+        <div className="relative h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] overflow-hidden rounded-lg sm:rounded-xl md:rounded-2xl mx-4 sm:mx-6 md:mx-8 lg:mx-10 mt-6 sm:mt-8 md:mt-10">
             <AnimatePresence mode="wait">
                 <motion.div
                     key={currentIndex}
@@ -71,32 +71,39 @@ const Unit2Carousel = () => {
                 >
                     <Image
                         src={slides[currentIndex].image}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover object-center"
                         alt={slides[currentIndex].title}
+                        priority
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-purple-900/90 via-purple-900/50 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-purple-900/90 via-purple-900/40 to-transparent" />
 
                     <motion.div
-                        className="absolute bottom-20 left-20 max-w-2xl"
+                        className="absolute bottom-8 sm:bottom-12 md:bottom-16 lg:bottom-20 left-6 sm:left-10 md:left-16 lg:left-20 max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-2xl"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.3 }}
+                        transition={{ delay: 0.4 }}
                     >
-                        <h2 className="text-5xl font-bold text-white mb-4">{slides[currentIndex].title}</h2>
-                        <p className="text-xl text-white/80">{slides[currentIndex].subtitle}</p>
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 sm:mb-3 md:mb-4">
+                            {slides[currentIndex].title}
+                        </h2>
+                        <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90">
+                            {slides[currentIndex].subtitle}
+                        </p>
                     </motion.div>
                 </motion.div>
             </AnimatePresence>
 
-            <div className="absolute bottom-8 right-20 flex gap-3">
+            <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 right-6 sm:right-10 md:right-16 lg:right-20 flex gap-2 sm:gap-3">
                 {slides.map((_, index) => (
                     <motion.button
                         key={index}
                         whileHover={{ scale: 1.2 }}
                         whileTap={{ scale: 0.9 }}
                         onClick={() => setCurrentIndex(index)}
-                        className={`w-3 h-3 rounded-full transition-colors duration-300 
-              ${index === currentIndex ? 'bg-white' : 'bg-white/50'}`}
+                        className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 
+                            ${index === currentIndex
+                                ? 'bg-white scale-110'
+                                : 'bg-white/50 hover:bg-white/70'}`}
                     />
                 ))}
             </div>
@@ -112,8 +119,8 @@ const CapacityCard = ({ size, capacity, index }) => (
         whileHover={{ scale: 1.05, y: -5 }}
         className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-6 shadow-lg"
     >
-        <h3 className="text-2xl font-bold text-purple-900 mb-3">{size}</h3>
-        <div className="flex items-center gap-2 text-purple-700">
+        <h3 className="text-2xl font-bold text-blue-600 dark:text-green-500 mb-3">{size}</h3>
+        <div className="flex items-center gap-2 text-green-600 dark:text-blue-500">
             <Clock className="w-5 h-5" />
             <span className="font-semibold">{capacity}</span>
         </div>
@@ -129,11 +136,11 @@ const FacilityFeature = ({ icon: Icon, title, description, index }) => (
         className="flex gap-4 p-6 bg-white rounded-xl shadow-lg"
     >
         <div className="bg-purple-100 p-3 rounded-lg h-fit">
-            <Icon className="w-6 h-6 text-purple-600" />
+            <Icon className="w-6 h-6 text-blue-600 dark:text-green-500" />
         </div>
         <div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
-            <p className="text-gray-800 dark:text-white/90">{description}</p>
+            <p className="text-gray-800 dark:text-white/90 text-justify">{description}</p>
         </div>
     </motion.div>
 );
@@ -173,7 +180,7 @@ export default function Unit2Page() {
     return (
         <div className="min-h-screen ">
             <motion.section
-                className="relative h-[60vh] bg-gradient-to-r from-emerald-800 to-blue-900 text-white flex items-center justify-center"
+                className="relative h-[20vh] lg:h-[40vh] bg-gradient-to-r from-emerald-800 to-blue-900 text-white flex items-center justify-center"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
@@ -252,7 +259,7 @@ export default function Unit2Page() {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="mt-20 bg-gradient-to-r from-purple-900 to-indigo-900 rounded-2xl p-8 text-white"
+                    className="mt-20 bg-gradient-to-r from-blue-900 to-green-900 rounded-2xl p-8 text-white"
                 >
                     <div className="grid md:grid-cols-4 gap-8 text-center">
                         <div>

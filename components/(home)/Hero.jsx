@@ -172,51 +172,43 @@ const LandingPage = () => {
                                 className="relative"
                             >
                                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-800 rounded-3xl blur-3xl opacity-20 dark:opacity-40 animate-pulse" />
-                                <motion.div
-                                    className="relative group"
-                                    whileHover={{ scale: 1.02 }}
-                                    transition={{ duration: 0.3 }}
-                                >
-                                    <div className="absolute inset-0 bg-gradient-to-r from-black/5 to-black/30 dark:from-black/50 dark:to-black/70 rounded-3xl transition-opacity group-hover:opacity-50" />
-                                    <Image
-                                        src={about}
-                                        alt="Pharmaceutical Facility"
-                                        width={500}
-                                        height={500}
-                                        className="rounded-3xl shadow-2xl w-full object-cover"
-                                    />
-
-                                    {/* Floating Info Cards */}
+                                <div className="relative w-full">
                                     <motion.div
-                                        initial={{ opacity: 0, x: -20 }}
-                                        animate={{ opacity: 1, x: 0 }}
-                                        transition={{ delay: 0.5 }}
-                                        className="absolute -left-4 top-1/4 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-xl max-w-[200px] backdrop-blur-sm"
+                                        className="relative group"
+                                        whileHover={{ scale: 1.02 }}
+                                        transition={{ duration: 0.3 }}
                                     >
-                                        <div className="flex items-center gap-2 mb-2">
-                                            <FlaskConical className="h-5 w-5 text-blue-600 dark:text-blue-400" />
-                                            <h3 className="font-semibold text-gray-900 dark:text-white">Manufacturing</h3>
-                                        </div>
-                                        <p className="text-sm text-gray-600 dark:text-gray-400">
-                                            IV Fluids in 100ml & 500ml volumes
-                                        </p>
-                                    </motion.div>
+                                        <Image
+                                            src={about}
+                                            alt="Pharmaceutical Facility"
+                                            width={500}
+                                            height={500}
+                                            className="w-full h-auto max-h-[600px] object-cover rounded-3xl shadow-2xl transform transition-transform duration-300 group-hover:scale-[1.02]"
+                                            priority
+                                        />
 
-                                    <motion.div
-                                        initial={{ opacity: 0, x: 20 }}
-                                        animate={{ opacity: 1, x: 0 }}
-                                        transition={{ delay: 0.7 }}
-                                        className="absolute -right-4 bottom-1/4 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-xl max-w-[200px] backdrop-blur-sm"
-                                    >
-                                        <div className="flex items-center gap-2 mb-2">
-                                            <CheckCircle2 className="h-5 w-5 text-blue-600 dark:text-blue-400" />
-                                            <h3 className="font-semibold text-gray-900 dark:text-white">Quality</h3>
+                                        {/* Floating Info Cards - Made Responsive */}
+                                        <div className="absolute hidden md:block -left-4 top-1/4 bg-white dark:bg-gray-800 p-2 md:p-4 rounded-xl shadow-xl max-w-[200px] backdrop-blur-sm">
+                                            <div className="flex items-center gap-2 mb-2">
+                                                <FlaskConical className="h-4 md:h-5 w-4 md:w-5 text-blue-600 dark:text-blue-400" />
+                                                <h3 className="font-semibold text-sm md:text-base text-gray-900 dark:text-white">Manufacturing</h3>
+                                            </div>
+                                            <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400">
+                                                IV Fluids in 100ml & 500ml volumes
+                                            </p>
                                         </div>
-                                        <p className="text-sm text-gray-600 dark:text-gray-400">
-                                            International Regulatory Standards
-                                        </p>
+
+                                        <div className="absolute hidden md:block -right-4 bottom-1/4 bg-white dark:bg-gray-800 p-2 md:p-4 rounded-xl shadow-xl max-w-[200px] backdrop-blur-sm">
+                                            <div className="flex items-center gap-2 mb-2">
+                                                <CheckCircle2 className="h-4 md:h-5 w-4 md:w-5 text-blue-600 dark:text-blue-400" />
+                                                <h3 className="font-semibold text-sm md:text-base text-gray-900 dark:text-white">Quality</h3>
+                                            </div>
+                                            <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400">
+                                                International Regulatory Standards
+                                            </p>
+                                        </div>
                                     </motion.div>
-                                </motion.div>
+                                </div>
                             </motion.div>
                         </div>
                     </motion.div>
@@ -224,39 +216,45 @@ const LandingPage = () => {
             </section>
 
             {/* Excellence Section with Video */}
-            <section className="relative py-20 overflow-hidden">
+            <section section className="relative py-20 overflow-hidden" >
                 <div className="container mx-auto px-6">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Video Player Column */}
-                        <motion.div
-                            variants={fadeInLeft}
-                            initial="initial"
-                            whileInView="animate"
-                            viewport={{ once: true }}
-                            className="relative rounded-3xl overflow-hidden shadow-2xl"
-                            onMouseEnter={handleMouseEnter}
-                            onMouseLeave={handleMouseLeave}
-                        >
-                            <div className="aspect-w-16 aspect-h-9">
-                                <ReactPlayer
-                                    url="https://www.youtube.com/watch?v=bbaJd3U7ums"  // Replace with your video URL
-                                    width="100%"
-                                    height="400px"
-                                    controls
-                                    playing={isPlaying}
-                                    light="/Realcadethumnali.png"
-                                    className="rounded-3xl"
-                                    config={{
-                                        file: {
-                                            attributes: {
-                                                controlsList: 'nodownload'
-                                            }
-                                        }
-                                    }}
-                                />
+                        <div className="w-full my-8 px-4 md:px-6">
+                            <div
+                                className="relative rounded-3xl overflow-hidden shadow-2xl w-full max-w-4xl mx-auto"
+                                onMouseEnter={handleMouseEnter}
+                                onMouseLeave={handleMouseLeave}
+                            >
+                                <div className="relative w-full pb-[56.25%]">
+                                    <div className="absolute inset-0">
+                                        <ReactPlayer
+                                            url="https://www.youtube.com/watch?v=bbaJd3U7ums"
+                                            width="100%"
+                                            height="100%"
+                                            controls
+                                            playing={isPlaying}
+                                            light="/Realcadethumnali.png"
+                                            className="rounded-3xl"
+                                            config={{
+                                                youtube: {
+                                                    playerVars: {
+                                                        modestbranding: 1,
+                                                        controls: 1
+                                                    }
+                                                },
+                                                file: {
+                                                    attributes: {
+                                                        controlsList: 'nodownload'
+                                                    }
+                                                }
+                                            }}
+                                        />
+                                    </div>
+                                </div>
+                                <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-transparent pointer-events-none rounded-3xl" />
                             </div>
-                            <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-transparent pointer-events-none rounded-3xl" />
-                        </motion.div>
+                        </div>
 
                         {/* Content Column */}
                         <motion.div

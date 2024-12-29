@@ -31,7 +31,7 @@ export default function AboutUs() {
     return (
         <div className="min-h-screen">
             <motion.section
-                className="relative h-[60vh] bg-gradient-to-r from-emerald-800 to-blue-900 text-white flex items-center justify-center"
+                className="relative h-[20vh] lg:h-[40vh] bg-gradient-to-r from-emerald-800 to-blue-900 text-white flex items-center justify-center"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
@@ -41,6 +41,7 @@ export default function AboutUs() {
                         src={bgabout}
                         alt="Laboratory"
                         className="w-full h-full object-cover opacity-20"
+                        priority
                     />
                 </div>
                 <div className="container mx-auto px-6 z-10 text-center">
@@ -99,18 +100,18 @@ export default function AboutUs() {
                                 <p>We are up-coming in both Domestic and International Markets and are now a recognized player as IV Parenteral Formulation Company.</p>
                             </div>
                         </motion.div>
-                        <motion.div
-                            className="lg:w-1/2"
-                            variants={fadeInFromRight}
-                        >
-                            <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
+                        <motion.div className="block w-full lg:w-1/2" variants={fadeInFromRight}> {/* Ensures visibility on mobile */}
+                            <div className="relative w-full h-[200px] xs:h-[250px] sm:h-[300px] md:h-[400px] lg:h-[450px] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
                                 <Image
                                     src={medical}
                                     alt="Welcome Image"
                                     layout="fill"
                                     objectFit="cover"
-                                    className="hover:scale-105 transition-transform duration-300"
+                                    className="transform hover:scale-105 transition-all duration-700"
+                                    priority
                                 />
+                                {/* Optional overlay for better text contrast if needed */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                             </div>
                         </motion.div>
                     </div>
@@ -167,9 +168,9 @@ export default function AboutUs() {
                             </div>
                         </motion.div>
                         <motion.div variants={fadeInFromRight}>
-                            <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
+                            <div className="relative w-full aspect-[16/9] sm:aspect-[16/10] md:aspect-[16/8] lg:aspect-[16/7] rounded-lg overflow-hidden shadow-xl">
                                 <ReactPlayer
-                                    url="/videos/Facilities.mp4"  // Replace with your video URL
+                                    url="/videos/Facilities.mp4"
                                     width="100%"
                                     height="100%"
                                     muted={true}
@@ -185,6 +186,7 @@ export default function AboutUs() {
                                     }}
                                 />
                             </div>
+
                         </motion.div>
                     </div>
                 </div>
@@ -223,18 +225,21 @@ export default function AboutUs() {
                             </div>
                         </motion.div>
                         <motion.div
-                            className="lg:w-1/2"
+                            className="lg:w-1/2 w-full"
                             variants={fadeInFromLeft}
                         >
-                            <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
+                            <div className="relative w-full h-[200px] xs:h-[250px] sm:h-[300px] md:h-[400px] lg:h-[450px] rounded-xl overflow-hidden shadow-lg group">
                                 <Image
                                     src={filling}
                                     alt="Filling Area"
                                     layout="fill"
                                     objectFit="cover"
-                                    className="hover:scale-105 transition-transform duration-300"
+                                    className="transform group-hover:scale-105 transition-all duration-700"
                                 />
+                                {/* Enhanced hover effect overlay */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                             </div>
+
                         </motion.div>
                     </div>
                 </div>
@@ -310,7 +315,7 @@ export default function AboutUs() {
                 <div className="w-full">
                     {/* Manufacturing Section */}
                     <motion.section
-                        className="relative py-24 bg-cover bg-center"
+                        className="relative aspect-[21/9] sm:aspect-[21/10] md:aspect-[21/8] lg:aspect-[21/7] bg-cover bg-center mb-10"
                         initial="initial"
                         whileInView="animate"
                         viewport={{ once: true }}
@@ -336,7 +341,7 @@ export default function AboutUs() {
 
                     {/* Mission Section */}
                     <motion.section
-                        className="relative py-24 bg-cover bg-center"
+                        className="relative aspect-[21/9] sm:aspect-[21/10] md:aspect-[21/8] lg:aspect-[21/7] bg-cover bg-center mb-10"
                         initial="initial"
                         whileInView="animate"
                         viewport={{ once: true }}
@@ -374,7 +379,7 @@ export default function AboutUs() {
 
                     {/* Vision Section */}
                     <motion.section
-                        className="relative py-24 bg-cover bg-center"
+                        className="relative aspect-[21/9] sm:aspect-[21/10] md:aspect-[21/8] lg:aspect-[21/7] bg-cover bg-center"
                         initial="initial"
                         whileInView="animate"
                         viewport={{ once: true }}
