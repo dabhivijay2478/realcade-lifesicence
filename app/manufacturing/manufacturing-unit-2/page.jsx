@@ -1,0 +1,278 @@
+'use client'
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Factory, Building2, Users, Award, Droplet, Wind, Clock, ChevronRight, } from 'lucide-react';
+import silde1 from "@/Images/kadi-unit-pic-1.jpg"
+import silde2 from "@/Images/manufacturing/2149994398.jpg"
+import silde3 from "@/Images/manufacturing/rb_74286.png"
+import Image from 'next/image';
+import bgabout from "@/Images/aboutbg.jpg"
+import Link from 'next/link';
+const fadeIn = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.6 }
+};
+const Unit2Carousel = () => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const slides = [
+        {
+            image: silde1,
+            title: "Valod Manufacturing Unit",
+            subtitle: "Advanced Pharmaceutical Production"
+        },
+        {
+            image: silde2,
+            title: "State-of-the-art Facility",
+            subtitle: "ISO Certified Manufacturing"
+        },
+        {
+            image: silde3,
+            title: "Quality Control Lab",
+            subtitle: "Cutting-edge Testing Facilities"
+        }
+    ];
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentIndex((prev) => (prev + 1) % slides.length);
+        }, 5000);
+        return () => clearInterval(timer);
+    }, []);
+
+    const slideVariants = {
+        enter: { opacity: 0, scale: 1.2 },
+        center: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+                duration: 0.8,
+                ease: "easeOut"
+            }
+        },
+        exit: {
+            opacity: 0,
+            scale: 0.8,
+            transition: { duration: 0.4 }
+        }
+    };
+
+    return (
+        <div className="relative h-[70vh] overflow-hidden">
+            <AnimatePresence mode="wait">
+                <motion.div
+                    key={currentIndex}
+                    variants={slideVariants}
+                    initial="enter"
+                    animate="center"
+                    exit="exit"
+                    className="absolute inset-0"
+                >
+                    <Image
+                        src={slides[currentIndex].image}
+                        className="w-full h-full object-cover"
+                        alt={slides[currentIndex].title}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-purple-900/90 via-purple-900/50 to-transparent" />
+
+                    <motion.div
+                        className="absolute bottom-20 left-20 max-w-2xl"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.3 }}
+                    >
+                        <h2 className="text-5xl font-bold text-white mb-4">{slides[currentIndex].title}</h2>
+                        <p className="text-xl text-white/80">{slides[currentIndex].subtitle}</p>
+                    </motion.div>
+                </motion.div>
+            </AnimatePresence>
+
+            <div className="absolute bottom-8 right-20 flex gap-3">
+                {slides.map((_, index) => (
+                    <motion.button
+                        key={index}
+                        whileHover={{ scale: 1.2 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => setCurrentIndex(index)}
+                        className={`w-3 h-3 rounded-full transition-colors duration-300 
+              ${index === currentIndex ? 'bg-white' : 'bg-white/50'}`}
+                    />
+                ))}
+            </div>
+        </div>
+    );
+};
+
+const CapacityCard = ({ size, capacity, index }) => (
+    <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: index * 0.1 }}
+        whileHover={{ scale: 1.05, y: -5 }}
+        className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-6 shadow-lg"
+    >
+        <h3 className="text-2xl font-bold text-purple-900 mb-3">{size}</h3>
+        <div className="flex items-center gap-2 text-purple-700">
+            <Clock className="w-5 h-5" />
+            <span className="font-semibold">{capacity}</span>
+        </div>
+    </motion.div>
+);
+
+const FacilityFeature = ({ icon: Icon, title, description, index }) => (
+    <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: index * 0.2 }}
+        whileHover={{ scale: 1.03 }}
+        className="flex gap-4 p-6 bg-white rounded-xl shadow-lg"
+    >
+        <div className="bg-purple-100 p-3 rounded-lg h-fit">
+            <Icon className="w-6 h-6 text-purple-600" />
+        </div>
+        <div>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
+            <p className="text-gray-600">{description}</p>
+        </div>
+    </motion.div>
+);
+
+export default function Unit2Page() {
+    const [activeTab, setActiveTab] = useState('overview');
+
+    const capacityData = [
+        { size: "100 ml", capacity: "57,200 bottles/day" },
+        { size: "500 ml", capacity: "66,000 bottles/day" },
+        { size: "1000 ml", capacity: "36,900 bottles/day" }
+    ];
+
+    const features = [
+        {
+            icon: Factory,
+            title: "Manufacturing Excellence",
+            description: "Advanced BFS technology with integrated monitoring systems and automated quality control"
+        },
+        {
+            icon: Droplet,
+            title: "Water Management",
+            description: "Multiple-effect distillation plant with continuous monitoring and purification systems"
+        },
+        {
+            icon: Wind,
+            title: "Environmental Control",
+            description: "State-of-the-art HVAC system maintaining precise temperature and humidity levels"
+        },
+        {
+            icon: Building2,
+            title: "Infrastructure",
+            description: "19,331 m² of modern infrastructure with specialized production zones"
+        }
+    ];
+
+    return (
+        <div className="min-h-screen ">
+            <motion.section
+                className="relative h-[60vh] bg-gradient-to-r from-emerald-800 to-blue-900 text-white flex items-center justify-center"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+            >
+                <div className="absolute inset-0 overflow-hidden">
+                    <Image
+                        src={bgabout}
+                        alt="Laboratory"
+                        className="w-full h-full object-cover opacity-20"
+                    />
+                </div>
+                <div className="container mx-auto px-6 z-10 text-center">
+                    <motion.h1
+                        className="text-4xl md:text-6xl font-bold mb-4"
+                        {...fadeIn}
+                    >
+                        Manufacturing Unit 2
+                    </motion.h1>
+                    <motion.div
+                        className="text-xl md:text-2xl max-w-3xl mx-auto flex items-center justify-center gap-2"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.3 }}
+                    >
+                        <Link
+                            href="/"
+                            className="text-emerald-200 hover:text-emerald-100 transition-colors"
+                        >
+                            Home
+                        </Link>
+
+                        <ChevronRight className="text-emerald-200 h-5 w-5" />
+
+                        <Link
+                            href="/manufacturing/manufacturing-unit-2"
+                            className="text-emerald-200 hover:text-emerald-100 transition-colors"
+                        >
+                            Manufacturing Unit 2
+                        </Link>
+                    </motion.div>
+                </div>
+            </motion.section>
+            <Unit2Carousel />
+
+            <div className="max-w-7xl mx-auto px-4 py-20">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="text-center mb-16"
+                >
+                    <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                        Production Capacity
+                    </h2>
+                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Our Valod facility operates 24/7 with industry-leading efficiency
+                    </p>
+                </motion.div>
+
+                <div className="grid md:grid-cols-3 gap-8 mb-20">
+                    {capacityData.map((item, index) => (
+                        <CapacityCard key={index} {...item} index={index} />
+                    ))}
+                </div>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="grid md:grid-cols-2 gap-8"
+                >
+                    {features.map((feature, index) => (
+                        <FacilityFeature key={index} {...feature} index={index} />
+                    ))}
+                </motion.div>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="mt-20 bg-gradient-to-r from-purple-900 to-indigo-900 rounded-2xl p-8 text-white"
+                >
+                    <div className="grid md:grid-cols-4 gap-8 text-center">
+                        <div>
+                            <div className="text-4xl font-bold mb-2">130+</div>
+                            <div className="text-purple-200">Expert Staff</div>
+                        </div>
+                        <div>
+                            <div className="text-4xl font-bold mb-2">97.8%</div>
+                            <div className="text-purple-200">Efficiency Rate</div>
+                        </div>
+                        <div>
+                            <div className="text-4xl font-bold mb-2">24/7</div>
+                            <div className="text-purple-200">Operation</div>
+                        </div>
+                        <div>
+                            <div className="text-4xl font-bold mb-2">ISO</div>
+                            <div className="text-purple-200">Certified</div>
+                        </div>
+                    </div>
+                </motion.div>
+            </div>
+        </div>
+    );
+}
