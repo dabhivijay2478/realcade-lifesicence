@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { Button } from "./button";
+import Link from "next/link";
 
 export const AnimatedTestimonials = ({
   testimonials,
@@ -189,14 +191,17 @@ export const AnimatedTestimonials = ({
             </motion.div>
           </AnimatePresence>
 
-          {/* <div className="flex justify-between items-center mt-12">
-            <NavigationButton onClick={handlePrev}>
-              <ArrowLeft className="w-6 h-6 text-white" />
-            </NavigationButton>
-            <NavigationButton onClick={handleNext}>
-              <ArrowRight className="w-6 h-6 text-white" />
-            </NavigationButton>
-          </div> */}
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <Link href="/products/IVfluids">
+              <Button
+                size="lg"
+                className="bg-blue-600 dark:bg-green-500 hover:bg-blue-700 dark:hover:bg-blue-600 text-white shadow-lg shadow-blue-500/25 dark:shadow-blue-800/25"
+              >
+                Explore Products
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          </motion.div>
         </div>
       </div>
     </div>

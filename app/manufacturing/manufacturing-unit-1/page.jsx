@@ -106,10 +106,7 @@ const Unit1Metrics = ({ metric }) => (
                 <p className="text-2xl font-bold text-gray-800 dark:text-white/90">{metric.value}</p>
             </div>
         </div>
-        <div className="mt-4 flex items-center gap-2 text-blue-600">
-            <Clock className="w-4 h-4" />
-            <span className="text-sm">{metric.timeframe}</span>
-        </div>
+      
     </motion.div>
 );
 
@@ -232,7 +229,7 @@ export default function Unit1Page() {
 
             <div className="max-w-7xl mx-auto px-4 py-16">
                 <p className='text-gray-800 dark:text-white/90  mb-10 text-lg'>
-                    To keep the pace with requirements of today&#39;s pharmaceutical industry, we have adopted the most modern Aseptic BFS technology for manufacturing and packaging of Sterile Large Volume Parenteral from 100 ml (55000 Bottle Per Day) and 500 ml (66000 Bottle Per Day). Spread over 20330 Sq. mtr of land area near Kadi-Mehsana (Gujarat-India), our manufacturing operations are supported by most modern equipments, state - of - art Quality Control. With a total construction area of 6285 sq mts, our state - of - art manufacturing complex with following features gives us a competitive edge:
+                    To keep the pace with requirements of today&#39;s pharmaceutical industry, we have adopted the most modern Aseptic BFS technology for manufacturing and packaging of Sterile Large Volume Parenteral from 100 ml (1,00,000 Bottle Per Day) and 500 ml (1,00,000 Bottle Per Day). Spread over 20330 Sq. mtr of land area near Kadi-Mehsana (Gujarat-India), our manufacturing operations are supported by most modern equipments, state - of - art Quality Control. With a total construction area of 6285 sq mts, our state - of - art manufacturing complex with following features gives us a competitive edge:
                 </p>
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
                     {metrics.map((metric, index) => (

@@ -59,7 +59,7 @@ const Unit2Carousel = () => {
     };
 
     return (
-        <div className="relative h-[70vh] overflow-hidden">
+        <div className="relative h-[70vh] overflow-hidden rounded-2xl mt-10 mx-10">
             <AnimatePresence mode="wait">
                 <motion.div
                     key={currentIndex}
@@ -151,17 +151,17 @@ export default function Unit2Page() {
         {
             icon: Factory,
             title: "Manufacturing Excellence",
-            description: "Advanced BFS technology with integrated monitoring systems and automated quality control"
+            description: `The manufacturing systems utilize advanced Aseptic Blow Fill Seal technology with a nitrogen blowing facility for sensitive drug production. Clean rooms are constructed with prefabricated panels. Manufacturing takes place in a Grade "C" area, with vessels equipped for chilling and sterilization to support the production of various drug combinations in clear and suspension forms. Filling is conducted in a Grade "A" area with a Grade "C" background. Products undergo terminal sterilization using a Super-Heated Water Spray Sterilizer. The packing lines feature a 100% leak detection system for quality assurance.`
         },
         {
             icon: Droplet,
             title: "Water Management",
-            description: "Multiple-effect distillation plant with continuous monitoring and purification systems"
+            description: "Double pass RO system coupled with EDI+UV and UF for generation of high grade purified water followed by distillation process for generation of SWFI. Continuous recording system for WFI temperature, conductivity and velocity in loop."
         },
         {
             icon: Wind,
             title: "Environmental Control",
-            description: "State-of-the-art HVAC system maintaining precise temperature and humidity levels"
+            description: "Each activity is supported by a dedicated AHU system. Classified rooms have biometric access control for entry. All personnel and material entries to the plants are interlocked, and material entries are secured with dynamic LAF."
         },
         {
             icon: Building2,
@@ -227,9 +227,8 @@ export default function Unit2Page() {
                     <h2 className="text-4xl font-bold dark:text-green-600 text-blue-500 mb-4">
                         Production Capacity
                     </h2>
-                    <p className="text-xl text-gray-800 dark:text-white/90 max-w-3xl mx-auto">
+                    <p className="text-xl text-gray-800 dark:text-white/90 max-w-6xl mx-auto">
                         To keep the pace with requirements of today&#39;s pharmaceutical industry, we have adopted the most modern Aseptic BFS technology for manufacturing and packaging of Sterile Large Volume Parenteral from 100 ml (57200 Bottle Per Day) , 500 ml (66000 Bottle Per Day) and 1000 ml (36900 Bottle Per Day). Spread over 19331 Sq. mtr of land area near Valod (Gujarat-India), our manufacturing operations are supported by most modern equipments, state - of - art Quality Control. With a total construction area of 5203 sq mts, our state - of - art manufacturing complex with following features gives us a competitive edge:
-
 
                     </p>
                 </motion.div>

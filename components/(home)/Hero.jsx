@@ -17,6 +17,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Image from 'next/image';
 import about from "@/Images/about-3.jpg";
+import Link from 'next/link';
 
 // Enhanced animations
 const fadeInUp = {
@@ -126,13 +127,15 @@ const LandingPage = () => {
 
                                 <div className="flex flex-wrap gap-4">
                                     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                                        <Button
-                                            size="lg"
-                                            className="bg-blue-600 dark:bg-green-500 hover:bg-blue-700 dark:hover:bg-blue-600 text-white shadow-lg shadow-blue-500/25 dark:shadow-blue-800/25"
-                                        >
-                                            Explore Products
-                                            <ArrowDownRight className="ml-2 h-5 w-5" />
-                                        </Button>
+                                        <Link href="/products/IVfluids">
+                                            <Button
+                                                size="lg"
+                                                className="bg-blue-600 dark:bg-green-500 hover:bg-blue-700 dark:hover:bg-blue-600 text-white shadow-lg shadow-blue-500/25 dark:shadow-blue-800/25"
+                                            >
+                                                Explore Products
+                                                <ArrowRight className="ml-2 h-5 w-5" />
+                                            </Button>
+                                        </Link>
                                     </motion.div>
                                     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                                         <Button
@@ -311,14 +314,17 @@ const LandingPage = () => {
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                <Button
-                                    variant="outline"
-                                    size="lg"
-                                    className="border-2 border-green-200 dark:border-blue-800 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/50 group"
-                                >
-                                    Read More
-                                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                                </Button>
+                                <Link href="/about" >
+
+                                    <Button
+                                        variant="outline"
+                                        size="lg"
+                                        className="border-2 border-green-200 dark:border-blue-800 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/50 group"
+                                    >
+                                        Read More
+                                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                                    </Button>
+                                </Link>
                             </motion.div>
                         </motion.div>
                     </div>
