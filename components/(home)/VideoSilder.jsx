@@ -131,7 +131,7 @@ const VideoHeroSlider = () => {
                                                         animate="visible"
                                                     >
                                                         <div className="max-w-3xl">
-                                                            <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold text-blue-600 mb-2 sm:mb-3 tracking-tight">
+                                                            <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold dark:text-blue-600 text-green-500 mb-2 sm:mb-3 tracking-tight">
                                                                 {item.title}
                                                             </h2>
                                                             {item.subtitle && (
@@ -173,8 +173,8 @@ const VideoHeroSlider = () => {
                         className={cn(
                             "h-2 sm:h-3 rounded-full transition-all duration-300",
                             current === index
-                                ? "w-8 sm:w-12 bg-amber-500"
-                                : "w-2 sm:w-3 bg-white/50 hover:bg-amber-500"
+                                ? "w-8 sm:w-12 bg-blue-500"
+                                : "w-2 sm:w-3 bg-slate-900 dark:bg-white/90 hover:bg-green-600 "
                         )}
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}

@@ -113,7 +113,7 @@ const LandingPage = () => {
 
                                 <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
                                     Welcome to
-                                    <span className="block bg-gradient-to-r from-blue-600 to-blue-800 dark:from-blue-400 dark:to-blue-600 bg-clip-text text-transparent">
+                                    <span className="block  dark:text-blue-600 text-green-500">
                                         RealCade LifeScience
                                     </span>
                                 </h1>
@@ -128,7 +128,7 @@ const LandingPage = () => {
                                     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                                         <Button
                                             size="lg"
-                                            className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white shadow-lg shadow-blue-500/25 dark:shadow-blue-800/25"
+                                            className="bg-blue-600 dark:bg-green-500 hover:bg-blue-700 dark:hover:bg-blue-600 text-white shadow-lg shadow-blue-500/25 dark:shadow-blue-800/25"
                                         >
                                             Explore Products
                                             <ArrowDownRight className="ml-2 h-5 w-5" />
@@ -138,7 +138,7 @@ const LandingPage = () => {
                                         <Button
                                             size="lg"
                                             variant="outline"
-                                            className="border-2 border-blue-200 dark:border-blue-800 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/50"
+                                            className="border-2 border-green-200 dark:border-blue-800 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/50"
                                             onClick={handleDownload}
                                         >
                                             Download Brochurer
@@ -314,7 +314,7 @@ const LandingPage = () => {
                                 <Button
                                     variant="outline"
                                     size="lg"
-                                    className="border-2 border-blue-200 dark:border-blue-800 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/50 group"
+                                    className="border-2 border-green-200 dark:border-blue-800 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/50 group"
                                 >
                                     Read More
                                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />

@@ -37,7 +37,7 @@ const Unit1Slider = () => {
     }, []);
 
     return (
-        <div className="relative h-[70vh] overflow-hidden rounded-2xl">
+        <div className="relative h-[70vh] overflow-hidden rounded-2xl mt-10 mx-10">
             <AnimatePresence mode="wait">
                 <Image
                     key={currentIndex}
@@ -52,6 +52,7 @@ const Unit1Slider = () => {
             </AnimatePresence>
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+
 
             <div className="absolute bottom-8 left-8 text-white">
                 <motion.h3
@@ -85,7 +86,7 @@ const ProcessStep = ({ step, title, description, isActive }) => (
                 }`}>
                 {step}
             </div>
-            <h3 className="text-xl font-bold text-gray-800">{title}</h3>
+            <h3 className="text-xl font-bold dark:text-blue-600 text-green-500">{title}</h3>
         </div>
         <p className="text-gray-600">{description}</p>
     </motion.div>
@@ -102,7 +103,7 @@ const Unit1Metrics = ({ metric }) => (
             </div>
             <div>
                 <p className="text-sm text-gray-600">{metric.label}</p>
-                <p className="text-2xl font-bold text-gray-900">{metric.value}</p>
+                <p className="text-2xl font-bold text-gray-800 dark:text-white/90">{metric.value}</p>
             </div>
         </div>
         <div className="mt-4 flex items-center gap-2 text-blue-600">
@@ -230,6 +231,9 @@ export default function Unit1Page() {
             </motion.div>
 
             <div className="max-w-7xl mx-auto px-4 py-16">
+                <p className='text-gray-800 dark:text-white/90  mb-10 text-lg'>
+                    To keep the pace with requirements of today&#39;s pharmaceutical industry, we have adopted the most modern Aseptic BFS technology for manufacturing and packaging of Sterile Large Volume Parenteral from 100 ml (55000 Bottle Per Day) and 500 ml (66000 Bottle Per Day). Spread over 20330 Sq. mtr of land area near Kadi-Mehsana (Gujarat-India), our manufacturing operations are supported by most modern equipments, state - of - art Quality Control. With a total construction area of 6285 sq mts, our state - of - art manufacturing complex with following features gives us a competitive edge:
+                </p>
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
                     {metrics.map((metric, index) => (
                         <Unit1Metrics key={index} metric={metric} />
@@ -238,7 +242,7 @@ export default function Unit1Page() {
 
                 <div className="grid md:grid-cols-2 gap-12 items-start">
                     <div>
-                        <h2 className="text-3xl font-bold text-gray-900 mb-8">
+                        <h2 className="text-3xl font-bold text-gray-800 dark:text-white/90 mb-8">
                             Manufacturing Process
                         </h2>
                         <div className="space-y-2">
@@ -257,7 +261,7 @@ export default function Unit1Page() {
                         animate={{ opacity: 1, x: 0 }}
                         className="bg-white rounded-xl p-8 shadow-lg"
                     >
-                        <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                        <h2 className="text-2xl font-bold dark:text-green-600 text-blue-500 mb-6">
                             Key Features
                         </h2>
                         <ul className="space-y-4">
@@ -274,7 +278,7 @@ export default function Unit1Page() {
                                     initial={{ opacity: 0, x: -20 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: index * 0.1 }}
-                                    className="flex items-center gap-3 text-gray-700"
+                                    className="flex items-center gap-3 dark:text-blue-600 text-green-500"
                                 >
                                     <ArrowRight className="w-5 h-5 text-blue-500" />
                                     {feature}

@@ -151,7 +151,7 @@ export const AnimatedTestimonials = ({
             >
               <div>
                 <motion.h3
-                  className="text-3xl sm:text-4xl font-bold dark:text-white text-black"
+                  className="text-3xl sm:text-4xl font-bold dark:text-blue-600 text-green-500"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2 }}

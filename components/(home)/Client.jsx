@@ -53,10 +53,10 @@ const LogoCarousel = () => {
         {/* Header Section */}
         <div className="text-center mb-16">
           <h2 className="flex flex-col gap-2">
-            <span className="text-2xl font-bold text-indigo-200 sm:text-3xl md:text-4xl">
+            <span className="text-2xl font-bold dark:text-blue-600 text-green-500 sm:text-3xl md:text-4xl">
               Trusted by experts.
             </span>
-            <span className="text-2xl font-bold text-white sm:text-3xl md:text-4xl">
+            <span className="text-2xl font-bold dark:text-green-600 text-blue-500 sm:text-3xl md:text-4xl">
               Used by the leaders.
             </span>
           </h2>

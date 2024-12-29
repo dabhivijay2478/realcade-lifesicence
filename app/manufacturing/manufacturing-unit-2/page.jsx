@@ -133,7 +133,7 @@ const FacilityFeature = ({ icon: Icon, title, description, index }) => (
         </div>
         <div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
-            <p className="text-gray-600">{description}</p>
+            <p className="text-gray-800 dark:text-white/90">{description}</p>
         </div>
     </motion.div>
 );
@@ -224,11 +224,13 @@ export default function Unit2Page() {
                     animate={{ opacity: 1, y: 0 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                    <h2 className="text-4xl font-bold dark:text-green-600 text-blue-500 mb-4">
                         Production Capacity
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Our Valod facility operates 24/7 with industry-leading efficiency
+                    <p className="text-xl text-gray-800 dark:text-white/90 max-w-3xl mx-auto">
+                        To keep the pace with requirements of today&#39;s pharmaceutical industry, we have adopted the most modern Aseptic BFS technology for manufacturing and packaging of Sterile Large Volume Parenteral from 100 ml (57200 Bottle Per Day) , 500 ml (66000 Bottle Per Day) and 1000 ml (36900 Bottle Per Day). Spread over 19331 Sq. mtr of land area near Valod (Gujarat-India), our manufacturing operations are supported by most modern equipments, state - of - art Quality Control. With a total construction area of 5203 sq mts, our state - of - art manufacturing complex with following features gives us a competitive edge:
+
+
                     </p>
                 </motion.div>
 

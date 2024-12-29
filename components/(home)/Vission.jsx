@@ -90,7 +90,7 @@ export default function Vision() {
     "To serve mankind with efficacious medicines at affordable prices."
   ];
   return (
-    <div className="min-h-screen p-4 md:p-8 bg-gradient-to-b from-gray-950 to-gray-900">
+    <div className="min-h-screen p-4 md:p-8">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

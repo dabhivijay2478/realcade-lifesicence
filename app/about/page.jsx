@@ -87,8 +87,13 @@ export default function AboutUs() {
                             className="lg:w-1/2"
                             variants={fadeInFromLeft}
                         >
-                            <h1 className="text-4xl font-bold text-emerald-800 mb-6">Welcome to  RealCade LifeScience</h1>
-                            <div className="space-y-4 text-gray-700">
+                            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
+                                Welcome to
+                                <span className="block  dark:text-blue-600 text-green-500">
+                                    RealCade LifeScience
+                                </span>
+                            </h1>
+                            <div className="space-y-4 text-gray-800 dark:text-white/90">
                                 <p>Realcade Lifescience Pvt. Ltd., located in Kadi-Mehsana (Gujarat-India) has up-coming as India&39;s most versatile manufacturer of sterile liquids in Aseptic Form – Fill – Seal (FFS) Technology.</p>
                                 <p>Our capabilities include manufacturing IV Fluids in 100 ml & 500 ml volumes. Our product range includes Formulations, Fluid Therapy, Respiratory Solutions, Diluents and Injections.</p>
                                 <p>We are up-coming in both Domestic and International Markets and are now a recognized player as IV Parenteral Formulation Company.</p>
@@ -120,7 +125,7 @@ export default function AboutUs() {
                 viewport={{ once: true }}
             >
                 <div className="container mx-auto px-6">
-                    <h2 className="text-3xl font-bold text-center text-emerald-800 mb-12">Manufacturing Facilities</h2>
+                    <h2 className="text-3xl font-bold text-center dark:text-green-600 text-blue-500 mb-12">Manufacturing Facilities</h2>
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <motion.div variants={fadeInFromLeft}>
                             <div className="space-y-8">
@@ -148,7 +153,7 @@ export default function AboutUs() {
                                     }
                                 ].map((facility, index) => (
                                     <div key={index} className=" p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
-                                        <h3 className="text-xl font-semibold text-emerald-700 mb-4">{facility.title}</h3>
+                                        <h3 className="text-xl font-semibold dark:text-blue-600 text-green-500 mb-4">{facility.title}</h3>
                                         <ul className="space-y-3">
                                             {facility.details.map((detail, idx) => (
                                                 <li key={idx} className="flex items-center gap-3">
@@ -193,25 +198,25 @@ export default function AboutUs() {
                 viewport={{ once: true }}
             >
                 <div className="container mx-auto px-6">
-                    <h2 className="text-3xl font-bold text-center text-sky-800 mb-12">Filling Area</h2>
+                    <h2 className="text-3xl font-bold text-center dark:text-blue-600 text-green-500 mb-12">Filling Area</h2>
                     <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
                         <motion.div
                             className="lg:w-1/2 space-y-6"
                             variants={fadeInFromRight}
                         >
                             <div className="p-6 rounded-lg shadow-lg">
-                                <h3 className="text-xl font-bold text-sky-700 mb-4">Advanced Technology</h3>
+                                <h3 className="text-xl font-bold dark:text-green-600 text-blue-500 mb-4">Advanced Technology</h3>
                                 <ul className="space-y-3">
                                     <li className="flex items-center gap-3">
-                                        <div className="w-2 h-2 bg-sky-500 rounded-full"></div>
+                                        <div className="w-2 h-2 dark:text-green-600 text-blue-500 rounded-full"></div>
                                         <span>FFS Technology from USA</span>
                                     </li>
                                     <li className="flex items-center gap-3">
-                                        <div className="w-2 h-2 bg-sky-500 rounded-full"></div>
+                                        <div className="w-2 h-2 dark:text-green-600 text-blue-500 rounded-full"></div>
                                         <span>Class-A Filling Activity with Class-C Background</span>
                                     </li>
                                     <li className="flex items-center gap-3">
-                                        <div className="w-2 h-2 bg-sky-500 rounded-full"></div>
+                                        <div className="w-2 h-2 dark:text-green-600 text-blue-500 rounded-full"></div>
                                         <span>Super Heated Water Spray Sterilizer</span>
                                     </li>
                                 </ul>
@@ -243,11 +248,11 @@ export default function AboutUs() {
                 viewport={{ once: true }}
             >
                 <div className="container mx-auto px-6">
-                    <h2 className="text-3xl font-bold text-center text-emerald-800 mb-12">Utility Systems</h2>
+                    <h2 className="text-3xl font-bold text-center dark:text-blue-600 text-green-500 mb-12">Utility Systems</h2>
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
                             {
-                                icon: <Droplet className="w-8 h-8 text-blue-600" />,
+                                icon: <Droplet className="w-8 h-8 dark:text-green-600 text-blue-500 " />,
                                 title: "Water System",
                                 details: [
                                     "RO Plant: 5000 LTR/HR",
@@ -257,7 +262,7 @@ export default function AboutUs() {
                                 ]
                             },
                             {
-                                icon: <Wind className="w-8 h-8 text-blue-600" />,
+                                icon: <Wind className="w-8 h-8 dark:text-green-600 text-blue-500 " />,
                                 title: "HVAC System",
                                 details: [
                                     "17 AHUs for Classified Areas",
@@ -266,7 +271,7 @@ export default function AboutUs() {
                                 ]
                             },
                             {
-                                icon: <Zap className="w-8 h-8 text-blue-600" />,
+                                icon: <Zap className="w-8 h-8 dark:text-green-600 text-blue-500 " />,
                                 title: "Power & Steam",
                                 details: [
                                     "8 Ton Steam Boiler",
@@ -280,7 +285,7 @@ export default function AboutUs() {
                                 className=" p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
                             >
                                 <div className="mb-4">{utility.icon}</div>
-                                <h3 className="text-xl font-semibold text-gray-800 mb-4">{utility.title}</h3>
+                                <h3 className="text-xl font-semibold dark:text-blue-600 text-green-500  mb-4">{utility.title}</h3>
                                 <ul className="space-y-3">
                                     {utility.details.map((detail, idx) => (
                                         <li key={idx} className="flex items-center gap-3">

@@ -171,7 +171,7 @@ const Contact02Page = () => {
 
 
                 <motion.h2
-                    className="mt-3 text-2xl md:text-4xl font-black tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary"
+                    className="mt-3 text-2xl md:text-4xl font-black tracking-tight  dark:text-blue-600 text-green-500"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.2 }}
@@ -179,7 +179,7 @@ const Contact02Page = () => {
                     Chat to our friendly team
                 </motion.h2>
                 <motion.p
-                    className="mt-4 text-base sm:text-lg text-muted-foreground"
+                    className="mt-4 text-base sm:text-lg text-gray-800 dark:text-white/90"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.3 }}
@@ -224,7 +224,7 @@ const Contact02Page = () => {
                         >
                             <motion.div
                                 className="h-12 w-12 flex items-center justify-center bg-primary text-white rounded-full
-                                          group-hover:bg-secondary transition-colors duration-300"
+                                          group-hover:bg-green-500 dark:bg-green-600 dark:group-hover:bg-blue-500 transition-colors duration-300"
                             >
                                 {item.icon}
                             </motion.div>

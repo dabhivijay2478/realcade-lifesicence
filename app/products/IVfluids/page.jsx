@@ -194,13 +194,13 @@ const ProductListing = () => {
               {filteredProducts.map((product, index) => (
                 <Card key={index} className="hover:shadow-lg transition-shadow">
                   <CardHeader>
-                    <CardTitle className="text-lg">{product.name}</CardTitle>
+                    <CardTitle className="text-lg dark:text-blue-600 text-green-500">{product.name}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <Badge variant="secondary" className="mb-2">
+                    <Badge variant="secondary " className="mb-2 text-gray-800 dark:text-white/90">
                       {product.pack}
                     </Badge>
-                    <p className="text-sm text-gray-500 mt-2">{product.category}</p>
+                    <p className="text-sm text-gray-800 dark:text-white/90 mt-2">{product.category}</p>
                   </CardContent>
                 </Card>
               ))}
