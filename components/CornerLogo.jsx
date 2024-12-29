@@ -20,7 +20,7 @@ const CornerLogo = () => {
             <Link href="" className="group">
                 <Button
                     onClick={handleDownload}
-                    className="group relative overflow-hidden rounded-full "
+                    className="group relative overflow-hidden rounded-full bg-blue-500 dark:bg-green-500 "
                 >
                     <span className="relative flex items-center gap-2">
                         Brochure
