@@ -101,8 +101,8 @@ const Footer = () => {
                     <Link
                       href={link.href}
                       className={`transition-colors duration-200 ${isActive
-                          ? 'text-green-500 font-medium'
-                          : 'text-blue-500 hover:text-green-500'
+                        ? 'text-green-500 font-medium'
+                        : 'text-blue-500 hover:text-green-500'
                         }`}
                     >
                       {link.title}
@@ -133,9 +133,13 @@ const Footer = () => {
                 </div>
               </motion.div>
             ))}
-            <span className="ml-3 flex items-center space-x-2">
-              <Mail className="text-gray-600" />
+            <span className="ml-3 flex items-center space-x-2 hover:text-blue-500 cursor-pointer">
+              <Mail className="text-blue-500" />
               <span>realcadelifescience@gmail.com</span>
+            </span>
+            <span className="ml-3 flex items-center space-x-2 hover:text-blue-500 cursor-pointer">
+              <Mail className="text-blue-500" />
+              <span>info@realcadelifescience.com</span>
             </span>
 
           </motion.div>
