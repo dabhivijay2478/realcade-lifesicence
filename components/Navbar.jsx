@@ -20,7 +20,7 @@ const contactInfo = [
   { icon: Phone, text: "+91 9825070417", href: "tel:+919825070417" },
   { icon: Mail, text: "realcadelifescience@gmail.com", href: "mailto:realcadelifescience@gmail.com" },
   { icon: MapPin, text: "Survey No. 891-892, Y – Junction, At Narmada Canal, Karannagar, Kadi, Gujarat, India - 382715", href: "#" },
-  { icon: Clock, text: "Mon - Sat: 10:00 am - 7:00 pm", href: null }
+  { icon: Clock, text: "Mon - Sat: 24 Hours", href: null }
 ];
 
 const navItems = [
@@ -129,7 +129,7 @@ const Navbar = () => {
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.02 }}
-                className="flex items-center gap-3 group"
+                className="flex items-center gap-2 group"
               >
                 <motion.div
                   whileHover={{ rotate: 15 }}
