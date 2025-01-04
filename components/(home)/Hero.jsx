@@ -345,7 +345,7 @@ const LandingPage = () => {
                                     whileHover={{ scale: 1.02 }}
                                     transition={{ duration: 0.3 }}
                                 >
-                                    <Card className="bg-white/50 dark:bg-gray-800/50 border-blue-100 dark:border-blue-900 backdrop-blur-sm">
+                                    <Card className="feature-card bg-white/50 dark:bg-gray-800/50 border-blue-100 dark:border-blue-900 backdrop-blur-sm">
                                         <CardContent className="p-6">
                                             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                                                 Our manufacturing capabilities include IV Fluids in 100 ml & 500 ml volumes.
@@ -361,7 +361,7 @@ const LandingPage = () => {
                                     whileHover={{ scale: 1.02 }}
                                     transition={{ duration: 0.3 }}
                                 >
-                                    <Card className="bg-white/50 dark:bg-gray-800/50 border-blue-100 dark:border-blue-900 backdrop-blur-sm">
+                                    <Card className=" feature-card bg-white/50 dark:bg-gray-800/50 border-blue-100 dark:border-blue-900 backdrop-blur-sm">
                                         <CardContent className="p-6">
                                             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                                                 We are up-coming in both Domestic and International Markets and we are now a
