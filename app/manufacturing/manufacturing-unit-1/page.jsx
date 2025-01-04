@@ -163,7 +163,7 @@ export default function Unit1Page() {
         {
             icon: Factory,
             label: "Daily Production",
-            value: "55,000 units",
+            value: "1,00,000 units",
             timeframe: "24/7 Operation"
         },
         {
