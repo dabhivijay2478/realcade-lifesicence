@@ -99,7 +99,7 @@ const customStyles = `
       linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
-    animation: border-rotate 3s linear infinite;
+    animation: border-rotate 5s linear infinite;
   }
 
   :is(.dark .feature-card)::before {
