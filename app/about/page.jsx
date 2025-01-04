@@ -9,7 +9,13 @@ import medical from "@/Images/medicalabout.jpg";
 import filling from "@/Images/filling-area.png";
 import ReactPlayer from 'react-player';
 import CertificatesPage from '@/components/certification';
-
+import {
+    UserCog,
+    Cpu,
+    BarChart3,
+    Shield,
+    Lightbulb
+} from 'lucide-react';
 const fadeIn = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
@@ -28,6 +34,33 @@ const fadeInFromRight = {
     transition: { duration: 0.6 }
 };
 
+const strengths = [
+    {
+        icon: UserCog,
+        title: "Technical Expert",
+        description: "Chief Director has over 25 years of experience in Pharmaceutical Formulation IV Fluid Production & Productivity"
+    },
+    {
+        icon: Cpu,
+        title: "Technology Analysis",
+        description: "We utilize FFS TECHNOLOGY from USA, representing state-of-the-art manufacturing for IV Fluids"
+    },
+    {
+        icon: BarChart3,
+        title: "Market Study",
+        description: "Second largest supplier in INDIA with 40% installed capacity and second largest exporter with 60% installed capacity"
+    },
+    {
+        icon: Shield,
+        title: "Quality Standard",
+        description: "Committed to IP Standard in INDIA and BP/USP Standard in Export markets"
+    },
+    {
+        icon: Lightbulb,
+        title: "Product Development",
+        description: "Continuous update of Product Design, Development, and Market Demand with standard quality and innovation"
+    }
+];
 
 
 export default function AboutUs() {
@@ -129,38 +162,29 @@ export default function AboutUs() {
             >
                 <div className="container mx-auto px-6">
                     <h2 className="text-4xl font-bold text-center mb-16 dark:text-green-600 text-blue-500 ">Our Strength</h2>
-                    <div className="flex flex-wrap justify-center gap-8">
-                        {[
-                            {
-                                title: "Technical Expert",
-                                description: "Chief Director has over 25 years of experience in Pharmaceutical Formulation IV Fluid Production & Productivity"
-                            },
-                            {
-                                title: "Technology Analysis",
-                                description: "We utilize FFS TECHNOLOGY from USA, representing state-of-the-art manufacturing for IV Fluids"
-                            },
-                            {
-                                title: "Market Study",
-                                description: "Second largest supplier in INDIA with 40% installed capacity and second largest exporter with 60% installed capacity"
-                            },
-                            {
-                                title: "Quality Standard",
-                                description: "Committed to IP Standard in INDIA and BP/USP Standard in Export markets"
-                            },
-                            {
-                                title: "Product Development",
-                                description: "Continuous update of Product Design, Development, and Market Demand with standard quality and innovation"
-                            }
-                        ].map((strength, index) => (
-                            <motion.div
-                                key={index}
-                                variants={fadeIn}
-                                className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)] p-8  rounded-xl shadow-lg hover:shadow-xl transition-shadow"
-                            >
-                                <h3 className="text-xl font-semibold mb-4 text-emerald-600 dark:text-emerald-400">{strength.title}</h3>
-                                <p className="text-gray-600 dark:text-gray-300">{strength.description}</p>
-                            </motion.div>
-                        ))}
+                    <div className="container mx-auto px-4 py-12">
+                    
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {strengths.map((strength, index) => {
+                                const IconComponent = strength.icon;
+                                return (
+                                    <div
+                                        key={index}
+                                        className="p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 transform hover:-translate-y-1"
+                                    >
+                                        <div className="flex items-center gap-3 mb-4">
+                                            <IconComponent className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
+                                            <h3 className="text-xl font-semibold text-emerald-600 dark:text-emerald-400">
+                                                {strength.title}
+                                            </h3>
+                                        </div>
+                                        <p className="text-gray-600 dark:text-gray-300">
+                                            {strength.description}
+                                        </p>
+                                    </div>
+                                );
+                            })}
+                        </div>
                     </div>
                 </div>
             </motion.section>
@@ -452,7 +476,7 @@ export default function AboutUs() {
                         ))}
                     </div>
                 </div>
-                
+
                 <CertificatesPage />
             </motion.section>
             <motion.section
