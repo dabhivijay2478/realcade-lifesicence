@@ -133,13 +133,13 @@ const FacilityFeature = ({ icon: Icon, title, description, index }) => (
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: index * 0.2 }}
         whileHover={{ scale: 1.03 }}
-        className="flex gap-4 p-6 bg-white rounded-xl shadow-lg"
+        className="flex gap-4 p-6  rounded-xl shadow-lg"
     >
         <div className="bg-purple-100 p-3 rounded-lg h-fit">
             <Icon className="w-6 h-6 text-blue-600 dark:text-green-500" />
         </div>
         <div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
+            <h3 className="text-xl font-bold  mb-2 text-blue-600 dark:text-green-500">{title}</h3>
             <p className="text-gray-800 dark:text-white/90 text-justify">{description}</p>
         </div>
     </motion.div>
@@ -149,7 +149,7 @@ export default function Unit2Page() {
     const [activeTab, setActiveTab] = useState('overview');
 
     const capacityData = [
-        { size: "100 ml", capacity: "57,200 bottles/day" },
+        { size: "100 ml", capacity: "1,00,000 bottles/day" },
         { size: "500 ml", capacity: "66,000 bottles/day" },
         { size: "1000 ml", capacity: "36,900 bottles/day" }
     ];
@@ -236,7 +236,7 @@ export default function Unit2Page() {
                     </h2>
                     <p className="text-xl text-gray-800 dark:text-white/90 max-w-6xl mx-auto text-justify">
 
-                        To keep the pace with requirements of today&#39;s pharmaceutical industry, we have adopted the most modern Aseptic BFS technology for manufacturing and packaging of Sterile Large Volume Parenteral from <span className='text-green-500 dark:text-blue-500 font-bold'>100 ml </span>(<span className='text-blue-500 dark:text-green-600 font-bold'>57200 Bottle Per Day</span>) ,<span className='text-green-500 dark:text-blue-500 font-bold'>500 ml</span>  (<span className='text-blue-500 dark:text-green-600 font-bold'>66000  Bottle Per Day</span>) and <span className='text-green-500 dark:text-blue-500 font-bold'>1000  ml </span>(<span className='text-blue-500 dark:text-green-600 font-bold'>36900  Bottle Per Day</span>). Spread over <span className='text-green-600 font-semibold'>19331 Sq. mtr </span> of land area near Valod (Gujarat-India), our manufacturing operations are supported by most modern equipments, state - of - art Quality Control. With a total construction area of <span className='text-green-600 font-semibold'>5203 sq mts</span>, our state - of - art manufacturing complex with following features gives us a competitive edge:
+                        To keep the pace with requirements of today&#39;s pharmaceutical industry, we have adopted the most modern Aseptic BFS technology for manufacturing and packaging of Sterile Large Volume Parenteral from <span className='text-green-500 dark:text-blue-500 font-bold'>100 ml </span>(<span className='text-blue-500 dark:text-green-600 font-bold'>1,00,000 Bottle Per Day</span>) ,<span className='text-green-500 dark:text-blue-500 font-bold'>500 ml</span>  (<span className='text-blue-500 dark:text-green-600 font-bold'>66000  Bottle Per Day</span>) and <span className='text-green-500 dark:text-blue-500 font-bold'>1000  ml </span>(<span className='text-blue-500 dark:text-green-600 font-bold'>36900  Bottle Per Day</span>). Spread over <span className='text-green-600 font-semibold'>19331 Sq. mtr </span> of land area near Valod (Gujarat-India), our manufacturing operations are supported by most modern equipments, state - of - art Quality Control. With a total construction area of <span className='text-green-600 font-semibold'>5203 sq mts</span>, our state - of - art manufacturing complex with following features gives us a competitive edge:
 
                     </p>
                 </motion.div>

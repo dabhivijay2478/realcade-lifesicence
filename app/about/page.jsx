@@ -8,6 +8,7 @@ import bgabout from "@/Images/aboutbg.jpg";
 import medical from "@/Images/medicalabout.jpg";
 import filling from "@/Images/filling-area.png";
 import ReactPlayer from 'react-player';
+import CertificatesPage from '@/components/certification';
 
 const fadeIn = {
     initial: { opacity: 0, y: 20 },
@@ -26,6 +27,8 @@ const fadeInFromRight = {
     animate: { opacity: 1, x: 0 },
     transition: { duration: 0.6 }
 };
+
+
 
 export default function AboutUs() {
     return (
@@ -449,6 +452,8 @@ export default function AboutUs() {
                         ))}
                     </div>
                 </div>
+                
+                <CertificatesPage />
             </motion.section>
             <motion.section
                 className="py-20"
@@ -519,6 +524,7 @@ export default function AboutUs() {
                                 </div>
                             </motion.div>
                         </div>
+
                     </motion.section>
 
                     {/* Vision Section */}

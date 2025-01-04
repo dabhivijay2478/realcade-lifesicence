@@ -96,7 +96,7 @@ const Unit1Slider = ({ images }) => {
                     animate={{ opacity: 1, y: 0 }}
                     className="text-2xl md:text-3xl font-bold mb-2"
                 >
-                    Aseptic Manufacturing
+                    Kadi Manufacturing Unit 
                 </motion.h3>
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
@@ -129,14 +129,14 @@ const ProcessStep = ({ step, title, description, isActive }) => (
             </motion.div>
             <h3 className="text-lg md:text-xl font-bold dark:text-blue-600 text-green-500">{title}</h3>
         </div>
-        <p className="text-sm md:text-base text-gray-600">{description}</p>
+        <p className="text-sm md:text-base text-gray-800 dark:text-white/90">{description}</p>
     </motion.div>
 );
 
 const Unit1Metrics = ({ metric }) => (
     <motion.div
         whileHover={{ scale: 1.05, y: -5 }}
-        className="bg-white rounded-xl p-4 md:p-6 shadow-lg"
+        className="rounded-xl p-4 md:p-6 shadow-lg"
     >
         <div className="flex items-center gap-4 mb-3">
             <motion.div
