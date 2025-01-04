@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { motion } from 'framer-motion';
 import ReactPlayer from 'react-player';
 import {
@@ -63,6 +63,65 @@ const handleDownload = () => {
     link.click();
     document.body.removeChild(link);
 };
+const customStyles = `
+  @property --border-angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  }
+
+  .feature-card {
+    position: relative;
+    background: transparent;
+    border-radius: 0.75rem;
+    padding: 1px;
+  }
+
+  .feature-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 0.75rem;
+    padding: 2px;
+    background: linear-gradient(
+      var(--border-angle),
+      rgb(34 197 94 / 0.2),
+      rgb(34 197 94 / 0.4),
+      rgb(34 197 94 / 0.6),
+      rgb(34 197 94 / 0.4),
+      rgb(34 197 94 / 0.2)
+    );
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: border-rotate 3s linear infinite;
+  }
+
+  :is(.dark .feature-card)::before {
+    background: linear-gradient(
+      var(--border-angle),
+      rgb(59 130 246 / 0.2),
+      rgb(59 130 246 / 0.4),
+      rgb(59 130 246 / 0.6),
+      rgb(59 130 246 / 0.4),
+      rgb(59 130 246 / 0.2)
+    );
+  }
+
+  @keyframes border-rotate {
+    to {
+      --border-angle: 360deg;
+    }
+  }
+`;
+
+// Add this useEffect in your LandingPage component
+
 
 const LandingPage = () => {
     const [isHovering, setIsHovering] = useState(false);
@@ -83,7 +142,15 @@ const LandingPage = () => {
         setIsHovering(false);
         setIsPlaying(false);
     };
+    useEffect(() => {
+        const styleSheet = document.createElement("style");
+        styleSheet.textContent = customStyles;
+        document.head.appendChild(styleSheet);
 
+        return () => {
+            document.head.removeChild(styleSheet);
+        };
+    }, []);
     return (
         <div className="min-h-screen duration-300">
             {/* Hero Section */}
@@ -157,10 +224,12 @@ const LandingPage = () => {
                                             key={index}
                                             variants={fadeInUp}
                                             whileHover={{ scale: 1.05 }}
-                                            className="flex items-center gap-3 text-gray-600 dark:text-gray-300 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm p-3 rounded-xl"
+                                            className="feature-card"
                                         >
-                                            <feature.icon className="h-5 w-5 text-blue-600 dark:text-blue-400" />
-                                            <span className="font-medium">{feature.text}</span>
+                                            <div className="flex items-center gap-3 text-gray-600 dark:text-gray-300 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm p-3 rounded-xl">
+                                                <feature.icon className="h-5 w-5 text-green-600 dark:text-blue-400" />
+                                                <span className="font-medium">{feature.text}</span>
+                                            </div>
                                         </motion.div>
                                     ))}
                                 </div>
