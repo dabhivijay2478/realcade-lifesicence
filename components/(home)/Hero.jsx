@@ -1,5 +1,5 @@
 'use client'
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import ReactPlayer from 'react-player';
 import {
@@ -173,10 +173,12 @@ const LandingPage = () => {
                                     whileHover={{ scale: 1.05 }}
                                     className="inline-block"
                                 >
-                                    <Badge className="bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 px-4 py-2 text-sm backdrop-blur-sm">
-                                        Leading Pharmaceutical Manufacturer
-                                        <ArrowRight className="ml-2 h-4 w-4" />
-                                    </Badge>
+                                    <Link href="/about">
+                                        <Badge className="bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 px-4 py-2 text-sm backdrop-blur-sm">
+                                            Leading Pharmaceutical Manufacturer
+                                            <ArrowRight className="ml-2 h-4 w-4" />
+                                        </Badge>
+                                    </Link>
                                 </motion.div>
 
                                 <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
