@@ -12,6 +12,46 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
+// Custom CSS for gradient animation
+const customStyles = `
+  @property --gradient-angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  }
+
+  @keyframes gradient-rotation {
+    0%   { --gradient-angle: 0deg; }
+    100% { --gradient-angle: 360deg; }
+  }
+
+  .gradient-border-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    z-index: -1;
+    background: linear-gradient(
+      var(--gradient-angle),
+      #4f46e5,
+      #3b82f6,
+      #06b6d4,
+      #3b82f6,
+      #4f46e5
+    );
+    border-radius: 1rem;
+    animation: gradient-rotation 5s linear infinite;
+  }
+
+  .gradient-border-wrapper::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 0.875rem;
+    z-index: -1;
+  }
+`;
+
 const VideoHeroSlider = () => {
     const [api, setApi] = useState(null);
     const [current, setCurrent] = useState(0);
@@ -32,6 +72,11 @@ const VideoHeroSlider = () => {
     ];
 
     useEffect(() => {
+        // Add custom styles to document head
+        const styleSheet = document.createElement("style");
+        styleSheet.textContent = customStyles;
+        document.head.appendChild(styleSheet);
+
         if (!api) return;
         setCount(api.scrollSnapList().length);
         setCurrent(api.selectedScrollSnap());
@@ -39,6 +84,11 @@ const VideoHeroSlider = () => {
         api.on("select", () => {
             setCurrent(api.selectedScrollSnap());
         });
+
+        // Cleanup
+        return () => {
+            document.head.removeChild(styleSheet);
+        };
     }, [api]);
 
     const slideVariants = {
@@ -65,9 +115,9 @@ const VideoHeroSlider = () => {
     };
 
     return (
-        <div className="w-full mx-auto py-4 px-4 sm:px-4 lg:px-4 mt-28">
+        <div className="w-full mx-auto py-4 px-4 sm:px-4 lg:px-4 mt-32">
             <motion.div
-                className="relative overflow-hidden rounded-xl shadow-xl"
+                className="relative gradient-border-wrapper rounded-xl"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
@@ -93,7 +143,7 @@ const VideoHeroSlider = () => {
                                     >
                                         <Card className="border-0 bg-transparent overflow-hidden">
                                             <CardContent className="p-0">
-                                                <div className="relative w-full h-80 sm:h-96 lg:h-[550px]">
+                                                <div className="relative w-full h-80 sm:h-96 lg:h-[550px] rounded-lg overflow-hidden">
                                                     <div className="absolute inset-0">
                                                         <ReactPlayer
                                                             url={item.videoUrl}
@@ -131,7 +181,7 @@ const VideoHeroSlider = () => {
                                                         animate="visible"
                                                     >
                                                         <div className="max-w-3xl">
-                                                            <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold dark:text-blue-600 text-green-500 mb-2 sm:mb-3 tracking-tight">
+                                                            <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold text-blue-500 mb-2 sm:mb-3 tracking-tight">
                                                                 {item.title}
                                                             </h2>
                                                             {item.subtitle && (
@@ -153,10 +203,10 @@ const VideoHeroSlider = () => {
                         </AnimatePresence>
                     </CarouselContent>
 
-                    <div className="absolute inset-y-0 left-0 right-0 flex items-center justify-between pointer-events-none px-2 sm:px-4 lg:px-6">
+                    {/* <div className="absolute inset-y-0 left-0 right-0 flex items-center justify-between pointer-events-none px-2 sm:px-4 lg:px-6">
                         <CarouselPrevious className="pointer-events-auto h-8 w-8 sm:h-12 sm:w-12 rounded-full border-2 border-white/20 bg-black/30 hover:bg-black/40 text-white backdrop-blur-sm transition-all duration-300 opacity-75 hover:opacity-100" />
                         <CarouselNext className="pointer-events-auto h-8 w-8 sm:h-12 sm:w-12 rounded-full border-2 border-white/20 bg-black/30 hover:bg-black/40 text-white backdrop-blur-sm transition-all duration-300 opacity-75 hover:opacity-100" />
-                    </div>
+                    </div> */}
                 </Carousel>
             </motion.div>
 
@@ -174,7 +224,7 @@ const VideoHeroSlider = () => {
                             "h-2 sm:h-3 rounded-full transition-all duration-300",
                             current === index
                                 ? "w-8 sm:w-12 bg-blue-500"
-                                : "w-2 sm:w-3 bg-slate-900 dark:bg-white/90 hover:bg-green-600 "
+                                : "w-2 sm:w-3 bg-slate-900 dark:bg-white/90 hover:bg-blue-600"
                         )}
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}

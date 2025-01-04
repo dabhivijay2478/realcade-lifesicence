@@ -19,7 +19,7 @@ const manufacturing = [
 const contactInfo = [
   { icon: Phone, text: "+91 9825070417", href: "tel:+919825070417" },
   { icon: Mail, text: "realcadelifescience@gmail.com", href: "mailto:realcadelifescience@gmail.com" },
-  { icon: MapPin, text: "Survey No. 891-892, Y – Junction, At Narmada Canal, Karannagar, Kadi, Gujarat, India - 382715", href: "#" },
+  { icon: MapPin, text: "Survey No. 891-892,Y-Junction, At Narmada Canal, Karannagar, Kadi,Gujarat,India-382715", href: "#" },
   { icon: Clock, text: "Mon - Sat: 24 Hours Open", href: null }
 ];
 
