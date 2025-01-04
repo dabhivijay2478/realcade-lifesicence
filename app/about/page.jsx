@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { ChevronRight, Droplet, Wind, Zap } from 'lucide-react';
 import Link from 'next/link';
-import bgabout from "@/Images/aboutbg.jpg"
-import medical from "@/Images/medicalabout.jpg"
-import filling from "@/Images/filling-area.png"
+import bgabout from "@/Images/aboutbg.jpg";
+import medical from "@/Images/medicalabout.jpg";
+import filling from "@/Images/filling-area.png";
 import ReactPlayer from 'react-player';
 
 const fadeIn = {
@@ -30,6 +30,7 @@ const fadeInFromRight = {
 export default function AboutUs() {
     return (
         <div className="min-h-screen">
+            {/* Keeping existing header section */}
             <motion.section
                 className="relative h-[20vh] lg:h-[40vh] bg-gradient-to-r from-emerald-800 to-blue-900 text-white flex items-center justify-center"
                 initial={{ opacity: 0 }}
@@ -75,7 +76,6 @@ export default function AboutUs() {
                     </motion.div>
                 </div>
             </motion.section>
-            {/* Welcome Section */}
             <motion.section
                 className="relative py-20 "
                 initial="initial"
@@ -117,8 +117,158 @@ export default function AboutUs() {
                     </div>
                 </div>
             </motion.section>
+            {/* Our Strength Section */}
+            <motion.section
+                className="py-20"
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true }}
+            >
+                <div className="container mx-auto px-6">
+                    <h2 className="text-4xl font-bold text-center mb-16 dark:text-green-600 text-blue-500 ">Our Strength</h2>
+                    <div className="flex flex-wrap justify-center gap-8">
+                        {[
+                            {
+                                title: "Technical Expert",
+                                description: "Chief Director has over 25 years of experience in Pharmaceutical Formulation IV Fluid Production & Productivity"
+                            },
+                            {
+                                title: "Technology Analysis",
+                                description: "We utilize FFS TECHNOLOGY from USA, representing state-of-the-art manufacturing for IV Fluids"
+                            },
+                            {
+                                title: "Market Study",
+                                description: "Second largest supplier in INDIA with 40% installed capacity and second largest exporter with 60% installed capacity"
+                            },
+                            {
+                                title: "Quality Standard",
+                                description: "Committed to IP Standard in INDIA and BP/USP Standard in Export markets"
+                            },
+                            {
+                                title: "Product Development",
+                                description: "Continuous update of Product Design, Development, and Market Demand with standard quality and innovation"
+                            }
+                        ].map((strength, index) => (
+                            <motion.div
+                                key={index}
+                                variants={fadeIn}
+                                className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)] p-8  rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+                            >
+                                <h3 className="text-xl font-semibold mb-4 text-emerald-600 dark:text-emerald-400">{strength.title}</h3>
+                                <p className="text-gray-600 dark:text-gray-300">{strength.description}</p>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </motion.section>
 
-            {/* Manufacturing Area Section */}
+            {/* Manufacturing Areas Section */}
+            <motion.section
+                className="py-20 "
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true }}
+            >
+                <div className="container mx-auto px-6">
+                    <h2 className="text-4xl font-bold text-center mb-16 dark:text-green-600 text-blue-500 ">Manufacturing Areas</h2>
+
+                    {/* Clean Room Area */}
+                    <div className="flex flex-col lg:flex-row items-center gap-12 mb-20">
+                        <motion.div variants={fadeInFromLeft} className="lg:w-1/2">
+                            <h3 className="text-2xl font-bold mb-6 text-blue-600 dark:text-emerald-400">Clean Room Area</h3>
+                            <ul className="space-y-4">
+                                <li className="flex items-start gap-3">
+                                    <div className="w-2 h-2 mt-2 bg-emerald-500 rounded-full"></div>
+                                    <span>Cleanrooms constructed with Modular Panels</span>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <div className="w-2 h-2 mt-2 bg-emerald-500 rounded-full"></div>
+                                    <span>5 Clean Room Entry-Exit Procedures with Inter-lock System</span>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <div className="w-2 h-2 mt-2 bg-emerald-500 rounded-full"></div>
+                                    <span>Separate Dispensing Area, Day Store & Granules Charge Area</span>
+                                </li>
+                            </ul>
+                        </motion.div>
+                        <motion.div variants={fadeInFromRight} className="lg:w-1/2">
+                            <div className="relative h-[300px] rounded-xl overflow-hidden shadow-lg">
+                                <Image
+                                    src="/images/cleanroom.jpg"
+                                    alt="Clean Room"
+                                    layout="fill"
+                                    objectFit="cover"
+                                    className="transform hover:scale-105 transition-all duration-700"
+                                />
+                            </div>
+                        </motion.div>
+                    </div>
+
+                    {/* Process Area */}
+                    <div className="flex flex-col lg:flex-row-reverse items-center gap-12 mb-20">
+                        <motion.div variants={fadeInFromRight} className="lg:w-1/2">
+                            <h3 className="text-2xl font-bold mb-6 text-blue-600 dark:text-emerald-400">Process Area</h3>
+                            <ul className="space-y-4">
+                                <li className="flex items-start gap-3">
+                                    <div className="w-2 h-2 mt-2 bg-emerald-500 rounded-full"></div>
+                                    <span>FFS Technology from USA for optimal filling operations</span>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <div className="w-2 h-2 mt-2 bg-emerald-500 rounded-full"></div>
+                                    <span>Class-A Filling Activity with Class-C Background</span>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <div className="w-2 h-2 mt-2 bg-emerald-500 rounded-full"></div>
+                                    <span>Super Heated Water Spray Sterilizer System</span>
+                                </li>
+                            </ul>
+                        </motion.div>
+                        <motion.div variants={fadeInFromLeft} className="lg:w-1/2">
+                            <div className="relative h-[300px] rounded-xl overflow-hidden shadow-lg">
+                                <Image
+                                    src="/images/process.jpg"
+                                    alt="Process Area"
+                                    layout="fill"
+                                    objectFit="cover"
+                                    className="transform hover:scale-105 transition-all duration-700"
+                                />
+                            </div>
+                        </motion.div>
+                    </div>
+
+                    {/* Distribution Section */}
+                    <motion.div
+                        variants={fadeIn}
+                        className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg mb-20"
+                    >
+                        <h3 className="text-2xl font-bold mb-8 text-center dark:text-green-600 text-blue-500 ">Global Presence</h3>
+                        <div className="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 className="text-xl font-semibold mb-4 dark:text-green-600 text-blue-500 ">India Distribution</h4>
+                                <p className="text-gray-600 dark:text-gray-300">Supplying to more than 15 states across India</p>
+                            </div>
+                            <div>
+                                <h4 className="text-xl font-semibold mb-4 dark:text-green-600 text-blue-500 ">International Markets</h4>
+                                <p className="text-gray-600 dark:text-gray-300">
+                                    Serving countries including Kazakhstan, Yemen, Kenya, Myanmar, Philippines, Cambodia, Uzbekistan, Ghana, Nigeria, Vietnam, Congo, Korea, and more
+                                </p>
+                            </div>
+                        </div>
+                    </motion.div>
+
+                    {/* Turnover Section */}
+                    <motion.div
+                        variants={fadeIn}
+                        className="text-center"
+                    >
+                        <h3 className="text-2xl font-bold mb-8 text-emerald-600 dark:text-emerald-400">Company Growth</h3>
+                        <p className="text-4xl font-bold text-emerald-500">111+ Crore</p>
+                        <p className="text-xl text-gray-600 dark:text-gray-300 mt-2">Turnover in 2022-2023</p>
+                    </motion.div>
+                </div>
+            </motion.section>
+
+            {/* Keeping existing sections */}
             <motion.section
                 className="py-20"
                 initial="initial"
@@ -191,8 +341,6 @@ export default function AboutUs() {
                     </div>
                 </div>
             </motion.section>
-
-            {/* Filling Area Section */}
             <motion.section
                 className="py-20"
                 initial="initial"
@@ -244,8 +392,6 @@ export default function AboutUs() {
                     </div>
                 </div>
             </motion.section>
-
-            {/* Utility Section */}
             <motion.section
                 className="py-20"
                 initial="initial"
@@ -304,8 +450,6 @@ export default function AboutUs() {
                     </div>
                 </div>
             </motion.section>
-
-            {/* Vision, Mission, Values Section */}
             <motion.section
                 className="py-20"
                 initial="initial"
