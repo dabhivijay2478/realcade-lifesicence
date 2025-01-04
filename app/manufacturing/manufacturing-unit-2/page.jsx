@@ -234,8 +234,9 @@ export default function Unit2Page() {
                     <h2 className="text-4xl font-bold dark:text-green-600 text-blue-500 mb-4">
                         Production Capacity
                     </h2>
-                    <p className="text-xl text-gray-800 dark:text-white/90 max-w-6xl mx-auto">
-                        To keep the pace with requirements of today&#39;s pharmaceutical industry, we have adopted the most modern Aseptic BFS technology for manufacturing and packaging of Sterile Large Volume Parenteral from 100 ml (57200 Bottle Per Day) , 500 ml (66000 Bottle Per Day) and 1000 ml (36900 Bottle Per Day). Spread over 19331 Sq. mtr of land area near Valod (Gujarat-India), our manufacturing operations are supported by most modern equipments, state - of - art Quality Control. With a total construction area of 5203 sq mts, our state - of - art manufacturing complex with following features gives us a competitive edge:
+                    <p className="text-xl text-gray-800 dark:text-white/90 max-w-6xl mx-auto text-justify">
+
+                        To keep the pace with requirements of today&#39;s pharmaceutical industry, we have adopted the most modern Aseptic BFS technology for manufacturing and packaging of Sterile Large Volume Parenteral from <span className='text-green-500 dark:text-blue-500 font-bold'>100 ml </span>(<span className='text-blue-500 dark:text-green-600 font-bold'>57200 Bottle Per Day</span>) ,<span className='text-green-500 dark:text-blue-500 font-bold'>500 ml</span>  (<span className='text-blue-500 dark:text-green-600 font-bold'>66000  Bottle Per Day</span>) and <span className='text-green-500 dark:text-blue-500 font-bold'>1000  ml </span>(<span className='text-blue-500 dark:text-green-600 font-bold'>36900  Bottle Per Day</span>). Spread over <span className='text-green-600 font-semibold'>19331 Sq. mtr </span> of land area near Valod (Gujarat-India), our manufacturing operations are supported by most modern equipments, state - of - art Quality Control. With a total construction area of <span className='text-green-600 font-semibold'>5203 sq mts</span>, our state - of - art manufacturing complex with following features gives us a competitive edge:
 
                     </p>
                 </motion.div>

@@ -271,13 +271,16 @@ export default function Unit1Page() {
             </motion.div>
 
             <div className="max-w-7xl mx-auto px-4 py-8 md:py-16">
+                <h2 className="text-4xl font-bold dark:text-green-600 text-blue-500 mb-4">
+                    Production Capacity
+                </h2>
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className='text-base md:text-lg text-gray-800 dark:text-white/90 mb-6 md:mb-10'
                 >
-                    To keep the pace with requirements of today&#39;s pharmaceutical industry, we have adopted the most modern Aseptic BFS technology for manufacturing and packaging of Sterile Large Volume Parenteral from 100 ml (1,00,000 Bottle Per Day) and 500 ml (1,00,000 Bottle Per Day). Spread over 20330 Sq. mtr of land area near Kadi-Mehsana (Gujarat-India), our manufacturing operations are supported by most modern equipments, state - of - art Quality Control. With a total construction area of 6285 sq mts, our state - of - art manufacturing complex with following features gives us a competitive edge:
+                    To keep the pace with requirements of today&#39;s pharmaceutical industry, we have adopted the most modern Aseptic BFS technology for manufacturing and packaging of Sterile Large Volume Parenteral from <span className='text-green-500 dark:text-blue-500 font-bold'>100 ml </span>(<span className='text-blue-500 dark:text-green-600 font-bold'>1,00,000 Bottle Per Day</span>) and <span className='text-green-500 dark:text-blue-500 font-bold'>500 ml </span>(<span className='text-blue-500 dark:text-green-600 font-bold'>1,00,000 Bottle Per Day</span>). Spread over  <span className='text-green-600 font-semibold'>20330  Sq. mtr </span> of land area near Kadi-Mehsana (Gujarat-India), our manufacturing operations are supported by most modern equipments, state - of - art Quality Control. With a total construction area of <span className='text-green-600 font-semibold'>6285  sq mts</span>, our state - of - art manufacturing complex with following features gives us a competitive edge:
                 </motion.p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-16">
