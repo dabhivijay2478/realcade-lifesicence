@@ -484,7 +484,6 @@ export default function AboutUs() {
                                                 alt={image.alt}
                                                 className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
                                             />
-                                            <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-opacity duration-300" />
 
                                         </div>
                                     </motion.div>
