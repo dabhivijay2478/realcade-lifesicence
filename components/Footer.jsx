@@ -168,7 +168,7 @@ const Footer = () => {
 
         {/* Footer Bottom */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
@@ -186,7 +186,7 @@ const Footer = () => {
                 <Icon className="h-5 w-5" />
               </motion.a>
             ))}
-          </motion.div>
+          </motion.div> */}
 
           <motion.p
             initial={{ opacity: 0 }}
