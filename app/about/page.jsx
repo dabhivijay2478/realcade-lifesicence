@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { ChevronRight, Droplet, Wind, Zap } from 'lucide-react';
+import { ChevronRight, Dot, Droplet, Wind, Zap } from 'lucide-react';
 import Link from 'next/link';
 import bgabout from "@/Images/aboutbg.jpg";
 import medical from "@/Images/medicalabout.jpg";
@@ -105,6 +105,20 @@ const internationalMarkets = [
 ];
 
 
+const technologies = [
+    {
+        title: "FFS Technology from USA",
+        isLarge: true
+    },
+    {
+        title: "Class-A Filling Activity with Class-C Background",
+        isLarge: false
+    },
+    {
+        title: "Super Heated Water Spray Sterilizer",
+        isLarge: false
+    }
+];
 const images = [
     {
         src: image5,
@@ -198,20 +212,16 @@ export default function AboutUs() {
                             <div className="space-y-4 text-gray-800 dark:text-white/90 text-justify text-lg mt-3">
                                 <p>
                                     <span className=" dark:text-green-600 text-blue-500 text-xl">
-                                        RealCade LifeScience
-                                    </span> Pvt. Ltd., based in Kadi-Mehsana, Gujarat, is rapidly emerging as one of India’s most versatile manufacturers of sterile liquids, specializing in advanced Aseptic Form-Fill-Seal (FFS) Technology.
+                                        RealCade LifeScience Pvt. Ltd
+                                    </span>., based in Kadi-Mehsana, Gujarat, is rapidly emerging as one of India’s most versatile manufacturers of sterile liquids, specializing in advanced Aseptic Form-Fill-Seal (FFS) Technology.
                                 </p>
                                 <p>
                                     Our state-of-the-art manufacturing capabilities enable us to produce IV Fluids in 100 ml and 500 ml volumes, with a comprehensive product range that includes Formulations, Fluid Therapy, Respiratory Solutions, Diluents, and Injections. We are committed to maintaining the highest standards of quality, ensuring that our products meet the stringent requirements of global pharmaceutical regulations.
                                 </p>
-                                <p>
-                                    Our cutting-edge facilities, combined with a team of skilled professionals, enable us to deliver consistent, reliable, and safe products that cater to the diverse needs of healthcare providers and patients worldwide.
-                                </p>
-                                <p>
-                                    With a strong presence in both domestic and international markets, we have established ourselves as a trusted leader in the IV Parenteral Formulation industry. Our focus on innovation, quality assurance, and customer satisfaction has earned us recognition as a preferred partner for pharmaceutical solutions. As we continue to expand, we remain dedicated to advancing healthcare by providing high-quality, life-saving products to markets across the globe.
-                                </p>
+
                             </div>
                         </motion.div>
+
                         <motion.div className="block w-full lg:w-1/2" variants={fadeInFromRight}> {/* Ensures visibility on mobile */}
                             <div className="relative w-full h-[200px] xs:h-[250px] sm:h-[300px] md:h-[400px] lg:h-[450px] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
                                 <Image
@@ -226,6 +236,14 @@ export default function AboutUs() {
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                             </div>
                         </motion.div>
+                    </div>
+                    <div className='space-y-4 text-gray-800 dark:text-white/90 text-justify text-lg mt-3'>
+                        <p>
+                            Our cutting-edge facilities, combined with a team of skilled professionals, enable us to deliver consistent, reliable, and safe products that cater to the diverse needs of healthcare providers and patients worldwide.
+                        </p>
+                        <p>
+                            With a strong presence in both domestic and international markets, we have established ourselves as a trusted leader in the IV Parenteral Formulation industry. Our focus on innovation, quality assurance, and customer satisfaction has earned us recognition as a preferred partner for pharmaceutical solutions. As we continue to expand, we remain dedicated to advancing healthcare by providing high-quality, life-saving products to markets across the globe.
+                        </p>
                     </div>
                 </div>
             </motion.section>
@@ -266,30 +284,40 @@ export default function AboutUs() {
                                     <span className='dark:text-blue-600 text-green-500 px-1'>
                                         Bharat Vihol
                                     </span>
-                                    currently serves as the Director of Realcade Lifescience Pvt. Ltd., where he plays a pivotal role in shaping the company’s strategic direction and driving its success. With over 25 years of experience in the pharmaceutical industry, particularly in BFS and FFS technology for IV Fluids and Pharmaceutical Formulation Manufacturing, Bharat has earned a reputation for excellence and innovation.
+                                    currently serves as the  <span className="  dark:text-green-600 text-blue-500">
+                                        Director, Realcade Lifescience Pvt. Ltd.
+                                    </span>, where he plays a pivotal role in shaping the company’s strategic direction and driving its success. With over 25 years of experience in the pharmaceutical industry, particularly in BFS and FFS technology for IV Fluids and Pharmaceutical Formulation Manufacturing, Bharat has earned a reputation for excellence and innovation.
                                 </p>
                                 <p>
-                                    His extensive expertise spans across all aspects of pharmaceutical formulation plant development, including the installation of machinery, design modifications, and the execution of complex IV Fluid projects. His deep understanding of both oral and injectable formulations, along with respiratory solutions, has been instrumental in the establishment and growth of Realcade Lifescience Pvt. Ltd. under his leadership.
+                                    His extensive expertise spans across all aspects of pharmaceutical formulation plant development, including the installation of machinery, design modifications, and the execution of complex IV Fluid projects. His deep understanding of both oral and injectable formulations, along with respiratory solutions, has been instrumental in the establishment and growth of  <span className="  dark:text-green-600 text-blue-500">
+                                        Realcade Lifescience Pvt. Ltd.
+                                    </span>. under his leadership.
                                 </p>
                             </div>
                         </motion.div>
                     </div>
                 </div>
-                <div className='text-lg px-10 mt-3 text-justify'>
-                    <p className='text-lg px-10 mt-3'>
+                <div className='text-lg px-6 mt-3 text-justify'>
+                    <p className='text-lg  mt-3'>
                         <span className='dark:text-blue-600 text-green-500 px-1 text-lg'>
                             Bharat Vihol
-                        </span>  contribution to the pharmaceutical sector has been nothing short of transformative. His ability to blend technical proficiency with strategic foresight has enabled Realcade Lifescience to emerge as a recognized leader in the manufacturing of sterile liquids. His strong focus on operational efficiency, quality assurance, and client satisfaction has consistently delivered outstanding results, positioning the company for continued success in both domestic and international markets.
+                        </span>  contribution to the pharmaceutical sector has been nothing short of transformative. His ability to blend technical proficiency with strategic foresight has enabled  <span className="  dark:text-green-600 text-blue-500">
+                            Realcade Lifescience
+                        </span> to emerge as a recognized leader in the manufacturing of sterile liquids. His strong focus on operational efficiency, quality assurance, and client satisfaction has consistently delivered outstanding results, positioning the company for continued success in both domestic and international markets.
                     </p>
-                    <p className='text-lg px-10 mt-3'>
+                    <p className='text-lg  mt-3'>
                         Since assuming his role as , <span className='dark:text-blue-600 text-green-500 px-1 text-lg'>
                             Director Bharat Vihol
-                        </span> has been a driving force behind the company’s rapid growth, fostering an environment of innovation and excellence. His dedication to continuous improvement and customer-centric approach ensures that Realcade Lifescience remains at the forefront of the pharmaceutical industry, consistently meeting and exceeding the expectations of its clients and stakeholders.
+                        </span> has been a driving force behind the company’s rapid growth, fostering an environment of innovation and excellence. His dedication to continuous improvement and customer-centric approach ensures that <span className="  dark:text-green-600 text-blue-500">
+                            Realcade Lifescience
+                        </span> remains at the forefront of the pharmaceutical industry, consistently meeting and exceeding the expectations of its clients and stakeholders.
                     </p>
-                    <p className='text-lg px-10 mt-3'>
+                    <p className='text-lg  mt-3'>
                         With his leadership and expertise, <span className='dark:text-blue-600 text-green-500 px-1 text-lg'>
                             Bharat Vihol
-                        </span> continues to steer the company towards new milestones, ensuring that Realcade Lifescience Pvt. Ltd. remains synonymous with high-quality pharmaceutical solutions and cutting-edge technology.
+                        </span> continues to steer the company towards new milestones, ensuring that <span className="  dark:text-green-600 text-blue-500">
+                            Realcade Lifescience Pvt. Ltd.
+                        </span>. remains synonymous with high-quality pharmaceutical solutions and cutting-edge technology.
                     </p>
                 </div>
             </motion.section>
@@ -581,20 +609,16 @@ export default function AboutUs() {
                             variants={fadeInFromRight}
                         >
                             <div className="p-6 rounded-lg shadow-lg">
-                                <h3 className="text-xl font-bold dark:text-green-600 text-blue-500 mb-4">Advanced Technology</h3>
+                                <h3 className="text-xl font-bold dark:text-blue-600 text-green-500 mb-4">Advanced Technology</h3>
                                 <ul className="space-y-3">
-                                    <li className="flex items-center gap-3">
-                                        <div className="w-2 h-2 dark:text-green-600 text-blue-500 rounded-full"></div>
-                                        <span>FFS Technology from USA</span>
-                                    </li>
-                                    <li className="flex items-center gap-3">
-                                        <div className="w-2 h-2 dark:text-green-600 text-blue-500 rounded-full"></div>
-                                        <span>Class-A Filling Activity with Class-C Background</span>
-                                    </li>
-                                    <li className="flex items-center gap-3">
-                                        <div className="w-2 h-2 dark:text-green-600 text-blue-500 rounded-full"></div>
-                                        <span>Super Heated Water Spray Sterilizer</span>
-                                    </li>
+                                    {technologies.map((tech, index) => (
+                                        <li key={index} className="flex items-center gap-3">
+                                            <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
+                                            <span className="text-gray-700 dark:text-gray-300">
+                                                {tech.title}
+                                            </span>
+                                        </li>
+                                    ))}
                                 </ul>
                             </div>
                         </motion.div>
