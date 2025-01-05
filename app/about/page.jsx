@@ -459,11 +459,13 @@ export default function AboutUs() {
                         className="text-center"
                     >
                         <h3 className="text-4xl font-bold mb-8 text-emerald-600 dark:text-emerald-400 ">Company Growth</h3>
-                        <Image
-                            src={trunover}
-                            alt="trunover"
-                            className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
-                        />
+                        <div className='flex justify-center'>
+                            <Image
+                                src={trunover}
+                                alt="trunover"
+                                className="max-w-3xl h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
+                            />
+                        </div>
                         <p className="text-4xl font-bold text-emerald-500 mt-2">111+ Crore</p>
                         <p className="text-xl text-gray-600 dark:text-gray-300 mt-2">Company Turnover in 2022-2023</p>
                         <div className="container mx-auto px-4 py-12">
