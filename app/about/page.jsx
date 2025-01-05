@@ -368,40 +368,62 @@ export default function AboutUs() {
                     <h2 className="text-4xl font-bold text-center mb-16 dark:text-green-600 text-blue-500 ">Manufacturing Areas</h2>
 
                     {/* Clean Room Area */}
-                    <div className="flex flex-col lg:flex-row items-center gap-12 mb-20">
-                        <motion.div variants={fadeInFromLeft} className="lg:w-1/2">
-                            <h3 className="text-2xl font-bold mb-6 text-blue-600 dark:text-emerald-400">Clean Room Area</h3>
-                            <ul className="space-y-4">
-                                <li className="flex items-start gap-3">
-                                    <div className="w-2 h-2 mt-2 bg-emerald-500 rounded-full"></div>
-                                    <span>Cleanrooms constructed with Modular Panels</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <div className="w-2 h-2 mt-2 bg-emerald-500 rounded-full"></div>
-                                    <span>5 Clean Room Entry-Exit Procedures with Inter-lock System</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <div className="w-2 h-2 mt-2 bg-emerald-500 rounded-full"></div>
-                                    <span>Separate Dispensing Area, Day Store & Granules Charge Area</span>
-                                </li>
-                            </ul>
-                        </motion.div>
-                        <motion.div variants={fadeInFromRight} className="lg:w-1/2">
-                            <div className="relative h-[500px] rounded-xl overflow-hidden shadow-lg">
-                                <Image
-                                    src={cleanroom}
-                                    alt="Clean Room"
-                                    layout="fill"
-                                    objectFit="cover"
-                                    className="transform hover:scale-105 transition-all duration-700"
-                                />
-                            </div>
-                        </motion.div>
+                    <div className="container mx-auto px-4 py-16">
+                        <div className="flex flex-col lg:flex-row items-center gap-12">
+                            <motion.div
+                                variants={fadeInFromLeft}
+                                initial="hidden"
+                                animate="visible"
+                                transition={{ duration: 0.6 }}
+                                className="lg:w-1/2 w-full"
+                            >
+                                <h3 className="text-3xl font-bold mb-8 text-blue-600 dark:text-emerald-400 leading-tight">
+                                    Clean Room Area
+                                </h3>
+                                <ul className="space-y-6">
+                                    {['Cleanrooms constructed with Modular Panels',
+                                        '5 Clean Room Entry-Exit Procedures with Inter-lock System',
+                                        'Separate Dispensing Area, Day Store & Granules Charge Area'
+                                    ].map((item, index) => (
+                                        <li key={index} className="flex items-start gap-4 group">
+                                            <div className="flex-shrink-0 w-3 h-3 mt-2 bg-emerald-500 rounded-full group-hover:scale-125 group-hover:bg-blue-500 transition-all duration-300"></div>
+                                            <span className="text-lg text-gray-700 dark:text-gray-200 group-hover:text-blue-600 dark:group-hover:text-emerald-400 transition-colors duration-300">
+                                                {item}
+                                            </span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </motion.div>
+
+                            <motion.div
+                                variants={fadeInFromRight}
+                                initial="hidden"
+                                animate="visible"
+                                transition={{ duration: 0.6 }}
+                                className="lg:w-1/2 w-full"
+                            >
+                                <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-gradient-to-br from-blue-50 to-emerald-50 dark:from-gray-800 dark:to-gray-900">
+                                    {/* Image wrapper with proper aspect ratio */}
+                                    <div className="aspect-[4/3] w-full">
+                                        <div className="group relative w-full h-full transform transition-transform duration-700 hover:scale-105">
+                                            <Image
+                                                src={cleanroom}
+                                                alt="Clean Room"
+                                                layout="fill"
+                                                objectFit="cover"
+                                                className="rounded-2xl"
+                                                priority
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        </div>
                     </div>
 
                     {/* Process Area */}
                     <div className="flex flex-col lg:flex-row-reverse items-center gap-12 mb-20">
-                        <motion.div variants={fadeInFromRight} className="lg:w-1/2">
+                        <motion.div variants={fadeInFromRight} className="lg:w-1/2 w-full">
                             <h3 className="text-2xl font-bold mb-6 text-blue-600 dark:text-emerald-400">Process Area</h3>
                             <ul className="space-y-4">
                                 <li className="flex items-start gap-3">
@@ -418,13 +440,15 @@ export default function AboutUs() {
                                 </li>
                             </ul>
                         </motion.div>
-                        <motion.div variants={fadeInFromLeft} className="lg:w-1/2">
-                            <div className="relative h-[500px] rounded-xl overflow-hidden shadow-lg">
+
+                        <motion.div variants={fadeInFromLeft} className="lg:w-1/2 w-full">
+                            <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
                                 <Image
                                     src={processarea}
                                     alt="Process Area"
                                     layout="fill"
                                     objectFit="cover"
+                                    priority
                                     className="transform hover:scale-105 transition-all duration-700"
                                 />
                             </div>
