@@ -188,10 +188,8 @@ const LandingPage = () => {
                                     </span>
                                 </h1>
 
-                                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                                    Located in Kadi-Mehsana (Gujarat-India), we are India&#39;s most versatile manufacturer
-                                    of sterile liquids in Aseptic Form – Fill – Seal (FFS) Technology. Since our
-                                    establishment in 2013, we&#39;ve been setting new standards in pharmaceutical manufacturing.
+                                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed  text-justify">
+                                    Located in Kadi-Mehsana, Gujarat, and with an additional unit in Valod, we are India&#39;s foremost manufacturer of sterile liquids, specializing in cutting-edge Aseptic Form-Fill-Seal (FFS) Technology. Since our establishment in 2013, we have continually raised the bar in pharmaceutical manufacturing, delivering excellence in every aspect of production. Our unwavering commitment to innovation, quality, and precision has firmly established us as a trusted leader in the industry.
                                 </p>
 
                                 <div className="flex flex-wrap gap-4">
