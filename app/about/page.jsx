@@ -33,6 +33,9 @@ import image5 from "@/Images/trunover/5.jpg"
 
 import cleanroom from "@/Images/cleanroom.jpg"
 import processarea from "@/Images/processarea.jpg"
+import trunover from "@/Images/trunover/trunover.png"
+
+
 import {
     UserCog,
     Cpu,
@@ -104,7 +107,7 @@ const internationalMarkets = [
 
 const images = [
     {
-        src: image1,
+        src: image5,
         alt: "Company Growth 2022",
     },
     {
@@ -116,13 +119,14 @@ const images = [
         alt: "Company Growth 2022",
     },
     {
-        src: image4,
+        src: image1,
         alt: "Company Growth 2022",
     },
     {
-        src: image5,
+        src: image4,
         alt: "Company Growth 2022",
     }
+
 ];
 export default function AboutUs() {
     return (
@@ -259,24 +263,34 @@ export default function AboutUs() {
                             </h1>
                             <div className="space-y-4 text-gray-800 dark:text-white/90 text-justify text-lg mt-3">
                                 <p>
-                                    Bharat Vihol currently serves as the Director of Realcade Lifescience Pvt. Ltd., where he plays a pivotal role in shaping the company’s strategic direction and driving its success. With over 25 years of experience in the pharmaceutical industry, particularly in BFS and FFS technology for IV Fluids and Pharmaceutical Formulation Manufacturing, Bharat has earned a reputation for excellence and innovation.
+                                    <span className='dark:text-blue-600 text-green-500 px-1'>
+                                        Bharat Vihol
+                                    </span>
+                                    currently serves as the Director of Realcade Lifescience Pvt. Ltd., where he plays a pivotal role in shaping the company’s strategic direction and driving its success. With over 25 years of experience in the pharmaceutical industry, particularly in BFS and FFS technology for IV Fluids and Pharmaceutical Formulation Manufacturing, Bharat has earned a reputation for excellence and innovation.
                                 </p>
                                 <p>
                                     His extensive expertise spans across all aspects of pharmaceutical formulation plant development, including the installation of machinery, design modifications, and the execution of complex IV Fluid projects. His deep understanding of both oral and injectable formulations, along with respiratory solutions, has been instrumental in the establishment and growth of Realcade Lifescience Pvt. Ltd. under his leadership.
                                 </p>
-                                <p>
-                                    Bharat Vihol  contribution to the pharmaceutical sector has been nothing short of transformative. His ability to blend technical proficiency with strategic foresight has enabled Realcade Lifescience to emerge as a recognized leader in the manufacturing of sterile liquids. His strong focus on operational efficiency, quality assurance, and client satisfaction has consistently delivered outstanding results, positioning the company for continued success in both domestic and international markets.
-                                </p>
-                                <p>
-                                    Since assuming his role as Director,  Bharat Vihol has been a driving force behind the company’s rapid growth, fostering an environment of innovation and excellence. His dedication to continuous improvement and customer-centric approach ensures that Realcade Lifescience remains at the forefront of the pharmaceutical industry, consistently meeting and exceeding the expectations of its clients and stakeholders.
-                                </p>
-                                <p>
-                                    With his leadership and expertise, Bharat Vihol continues to steer the company towards new milestones, ensuring that Realcade Lifescience Pvt. Ltd. remains synonymous with high-quality pharmaceutical solutions and cutting-edge technology.
-                                </p>
                             </div>
                         </motion.div>
-
                     </div>
+                </div>
+                <div className='text-lg px-10 mt-3 text-justify'>
+                    <p className='text-lg px-10 mt-3'>
+                        <span className='dark:text-blue-600 text-green-500 px-1 text-lg'>
+                            Bharat Vihol
+                        </span>  contribution to the pharmaceutical sector has been nothing short of transformative. His ability to blend technical proficiency with strategic foresight has enabled Realcade Lifescience to emerge as a recognized leader in the manufacturing of sterile liquids. His strong focus on operational efficiency, quality assurance, and client satisfaction has consistently delivered outstanding results, positioning the company for continued success in both domestic and international markets.
+                    </p>
+                    <p className='text-lg px-10 mt-3'>
+                        Since assuming his role as , <span className='dark:text-blue-600 text-green-500 px-1 text-lg'>
+                            Director Bharat Vihol
+                        </span> has been a driving force behind the company’s rapid growth, fostering an environment of innovation and excellence. His dedication to continuous improvement and customer-centric approach ensures that Realcade Lifescience remains at the forefront of the pharmaceutical industry, consistently meeting and exceeding the expectations of its clients and stakeholders.
+                    </p>
+                    <p className='text-lg px-10 mt-3'>
+                        With his leadership and expertise, <span className='dark:text-blue-600 text-green-500 px-1 text-lg'>
+                            Bharat Vihol
+                        </span> continues to steer the company towards new milestones, ensuring that Realcade Lifescience Pvt. Ltd. remains synonymous with high-quality pharmaceutical solutions and cutting-edge technology.
+                    </p>
                 </div>
             </motion.section>
             {/* Our Strength Section */}
@@ -444,9 +458,14 @@ export default function AboutUs() {
                         variants={fadeIn}
                         className="text-center"
                     >
-                        <h3 className="text-2xl font-bold mb-8 text-emerald-600 dark:text-emerald-400">Company Growth</h3>
-                        <p className="text-4xl font-bold text-emerald-500">111+ Crore</p>
-                        <p className="text-xl text-gray-600 dark:text-gray-300 mt-2">Turnover in 2022-2023</p>
+                        <h3 className="text-4xl font-bold mb-8 text-emerald-600 dark:text-emerald-400 ">Company Growth</h3>
+                        <Image
+                            src={trunover}
+                            alt="trunover"
+                            className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
+                        />
+                        <p className="text-4xl font-bold text-emerald-500 mt-2">111+ Crore</p>
+                        <p className="text-xl text-gray-600 dark:text-gray-300 mt-2">Company Turnover in 2022-2023</p>
                         <div className="container mx-auto px-4 py-12">
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                                 {images.map((image, index) => (
