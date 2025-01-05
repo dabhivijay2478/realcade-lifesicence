@@ -4,11 +4,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Factory, Building2, Users, Award, Clock, ArrowRight, ChevronRight, ChevronLeft } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import silde1 from "@/Images/kadi-unit-pic-1.jpg"
-import silde2 from "@/Images/kadi-unit-pic-2.jpg"
-import silde3 from "@/Images/kadi-unit-pic-3.jpg"
-import silde4 from "@/Images/kadi-unit-pic-4.jpg"
-import silde5 from "@/Images/kadi-unit-pic-5.jpg"
+import silde1 from "@/Images/unit/u3.jpg"
+import silde2 from "@/Images/unit/u2.jpg"
+import silde3 from "@/Images/unit/u4.jpg"
 
 import bgabout from "@/Images/aboutbg.jpg"
 const fadeIn = {
@@ -96,7 +94,7 @@ const Unit1Slider = ({ images }) => {
                     animate={{ opacity: 1, y: 0 }}
                     className="text-2xl md:text-3xl font-bold mb-2"
                 >
-                    Kadi Manufacturing Unit 
+                    Kadi Manufacturing Unit
                 </motion.h3>
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
@@ -267,7 +265,7 @@ export default function Unit1Page() {
                     </div>
                 </motion.section>
 
-                <Unit1Slider images={[silde1, silde2, silde3, silde4, silde5]} />
+                <Unit1Slider images={[silde1, silde2, silde3]} />
             </motion.div>
 
             <div className="max-w-7xl mx-auto px-4 py-8 md:py-16">

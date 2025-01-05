@@ -18,7 +18,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Image from 'next/image';
 import about from "@/Images/about-3.jpg";
 import Link from 'next/link';
-
+import welcomimage from "@/Images/unit/u6.jpg"
 // Enhanced animations
 const fadeInUp = {
     initial: { opacity: 0, y: 30 },
@@ -248,16 +248,16 @@ const LandingPage = () => {
                                         transition={{ duration: 0.3 }}
                                     >
                                         <Image
-                                            src={about}
+                                            src={welcomimage}
                                             alt="Pharmaceutical Facility"
-                                            width={500}
-                                            height={500}
-                                            className="w-full h-auto max-h-[600px] object-cover rounded-3xl shadow-2xl transform transition-transform duration-300 group-hover:scale-[1.02]"
+                                            width={900}
+                                            height={900}
+                                            className="w-full h-auto max-h-[800px] object-cover rounded-3xl shadow-2xl transform transition-transform duration-300 group-hover:scale-[1.02]"
                                             priority
                                         />
 
                                         {/* Floating Info Cards - Made Responsive */}
-                                        <div className="absolute hidden md:block -left-4 top-1/4 bg-white dark:bg-gray-800 p-2 md:p-4 rounded-xl shadow-xl max-w-[200px] backdrop-blur-sm">
+                                        {/* <div className="absolute hidden md:block -left-4 top-1/4 bg-white dark:bg-gray-800 p-2 md:p-4 rounded-xl shadow-xl max-w-[200px] backdrop-blur-sm">
                                             <div className="flex items-center gap-2 mb-2">
                                                 <FlaskConical className="h-4 md:h-5 w-4 md:w-5 text-blue-600 dark:text-blue-400" />
                                                 <h3 className="font-semibold text-sm md:text-base text-gray-900 dark:text-white">Manufacturing</h3>
@@ -275,7 +275,7 @@ const LandingPage = () => {
                                             <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400">
                                                 International Regulatory Standards
                                             </p>
-                                        </div>
+                                        </div> */}
                                     </motion.div>
                                 </div>
                             </motion.div>
