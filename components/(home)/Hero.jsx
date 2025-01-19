@@ -10,7 +10,8 @@ import {
     Shield,
     CheckCircle2,
     ArrowRight,
-    DownloadCloudIcon
+    DownloadCloudIcon,
+    Factory
 } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -127,10 +128,10 @@ const LandingPage = () => {
     const [isHovering, setIsHovering] = useState(false);
     const [isPlaying, setIsPlaying] = useState(false);
     const features = [
-        { icon: Shield, text: "GMP Certified" },
+        { icon: Shield, text: "WHO GMP Certified" },
         { icon: Globe2, text: "International Standards" },
-        { icon: FlaskConical, text: "Modern Facilities" },
-        { icon: Microscope, text: "Advanced R&D" }
+        { icon: Factory, text: "Modern Facilities" },
+        { icon: Microscope, text: "Advanced laboratory" }
     ];
 
     const handleMouseEnter = () => {
@@ -189,10 +190,23 @@ const LandingPage = () => {
                                 </h1>
 
                                 <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed  text-justify">
-                                    Located in Kadi-Mehsana, Gujarat, and with an additional unit in Valod, we are India&#39;s foremost manufacturer of sterile liquids, specializing in cutting-edge Aseptic Form-Fill-Seal (FFS) Technology. Since our establishment in 2013, we have continually raised the bar in pharmaceutical manufacturing, delivering excellence in every aspect of production. Our unwavering commitment to innovation, quality, and precision has firmly established us as a trusted leader in the industry.
+                                    <span className="  dark:text-blue-600 text-green-500">
+                                        Realcade Lifescience Pvt. Ltd.
+                                    </span> having up Corporate office Manufacturing Unit 1 Located at Kadi-Mehsana, Gujarat, and with an additional Manufacturing Unit 2 Located at Valod -Tapi, Gujarat, we are India&#39;s foremost manufacturer of sterile liquids, specializing in cutting-edge Aseptic Form-Fill-Seal (FFS) Technology. Since our establishment in 2013, we have continually raised the bar in pharmaceutical manufacturing, delivering excellence in every aspect of production. Our unwavering commitment to innovation, quality, and precision has firmly established us as a trusted leader in the industry.
                                 </p>
 
                                 <div className="flex flex-wrap gap-4">
+                                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                                        <Link href="/about">
+                                            <Button
+                                                size="lg"
+                                                className="bg-blue-600 dark:bg-green-500 hover:bg-blue-700 dark:hover:bg-blue-600 text-white shadow-lg shadow-blue-500/25 dark:shadow-blue-800/25"
+                                            >
+                                                About Us
+                                                <ArrowRight className="ml-2 h-5 w-5" />
+                                            </Button>
+                                        </Link>
+                                    </motion.div>
                                     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                                         <Link href="/products/IVfluids">
                                             <Button
@@ -204,17 +218,7 @@ const LandingPage = () => {
                                             </Button>
                                         </Link>
                                     </motion.div>
-                                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                                        <Button
-                                            size="lg"
-                                            variant="outline"
-                                            className="border-2 border-green-200 dark:border-blue-800 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/50"
-                                            onClick={handleDownload}
-                                        >
-                                            Download Brochurer
-                                            <DownloadCloudIcon className="ml-2 h-5 w-5" />
-                                        </Button>
-                                    </motion.div>
+
                                 </div>
 
                                 {/* Features Grid */}
@@ -227,7 +231,7 @@ const LandingPage = () => {
                                             className="feature-card"
                                         >
                                             <div className="flex items-center gap-3 text-gray-600 dark:text-gray-300 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm p-3 rounded-xl">
-                                                <feature.icon className="h-5 w-5 text-green-600 dark:text-blue-400" />
+                                                <feature.icon className="h-10 w-10 text-green-600 dark:text-blue-400" />
                                                 <span className="font-medium">{feature.text}</span>
                                             </div>
                                         </motion.div>
@@ -348,9 +352,8 @@ const LandingPage = () => {
                                     <Card className="feature-card bg-white/50 dark:bg-gray-800/50 border-blue-100 dark:border-blue-900 backdrop-blur-sm">
                                         <CardContent className="p-6">
                                             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                                                Our manufacturing capabilities include IV Fluids in 100 ml & 500 ml volumes.
-                                                Our product range includes Formulations, Fluid Therapy, Respiratory Solutions,
-                                                Diluents and Injections. We have introduced IV formulations in Antibiotic and
+                                                Our manufacturing capabilities include IV Fluids in 100 ml up to 1000 ml volumes.
+                                                Our product range includes Formulations, Fluid Therapy. We have introduced IV formulations in Antibiotic and
                                                 Anti fungal therapeutic segments having vast potential world-wide.
                                             </p>
                                         </CardContent>

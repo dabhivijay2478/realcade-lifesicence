@@ -80,6 +80,10 @@ const OfficeCard = ({ title, person, phone, email, address, hours }) => (
                             <Link href={`mailto:${email}`} className="hover:text-primary transition-colors">
                                 {email}
                             </Link>
+                            <br/>
+                            <Link href={`mailto:info@realcadelifescience.com`} className=" hover:text-primary transition-colors">
+                                info@realcadelifescience.com
+                            </Link>
                         </div>
                     </motion.div>
 
@@ -94,7 +98,7 @@ const OfficeCard = ({ title, person, phone, email, address, hours }) => (
                     <motion.div variants={fadeInUp} className="flex items-start gap-3">
                         <ClockIcon className="w-5 h-5 mt-1 text-primary" />
                         <div>
-                            <div className="font-medium">Hours</div>
+                            <div className="font-medium">Contact Hours</div>
                             <div>{hours}</div>
                         </div>
                     </motion.div>
@@ -424,12 +428,12 @@ const Contact02Page = () => {
                 >
                     <div className="space-y-6">
                         <OfficeCard
-                            title="Gujarat Office - Kadi"
-                            person="Mr. Bharat Vihol"
-                            phone="09825070417"
+                            title="Manufacturing Unit 1 - Kadi"
+                            person="Mr. Bharat Vihol(Director)"
+                            phone="09825070417 & 7573880044"
                             email="realcadelifescience@gmail.com"
                             address="Survey No. 891-892, Y – Junction, At Narmada Canal, Karannagar, Kadi, Kheda, Gujarat, India - 382715"
-                            hours="Mon-Sat: 9:30am – 6:30pm"
+                            hours="Mon-Sat: 9:30am – 5:30pm"
                         />
                         <div className="w-full h-[300px] rounded-lg overflow-hidden shadow-md">
                             <iframe
@@ -446,12 +450,12 @@ const Contact02Page = () => {
 
                     <div className="space-y-6">
                         <OfficeCard
-                            title="Gujarat Office - Tapi"
-                            person="Mr. Bharat Vihol"
-                            phone="09825070417"
+                            title="Manufacturing Unit 2 - Valod"
+                            person="Mr. Bharat Vihol(Director)"
+                            phone="09825070417 & 7573880022"
                             email="realcadelifescience@gmail.com"
                             address="Plot No. 1082/P, Takli Road, Ta.: Valod -394640, Dist.: TAPI, GUJARAT- INDIA"
-                            hours="Mon-Sat: 9:30am – 6:30pm"
+                            hours="Mon-Sat: 9:30am – 5:30pm"
                         />
                         <div className="w-full h-[300px] rounded-lg overflow-hidden shadow-md">
                             <iframe

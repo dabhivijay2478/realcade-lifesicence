@@ -365,9 +365,7 @@ export default function AboutUs() {
                 viewport={{ once: true }}
             >
                 <div className="container mx-auto px-6">
-                    <h2 className="text-4xl font-bold text-center mb-16 dark:text-green-600 text-blue-500 ">Manufacturing Areas</h2>
-
-                    {/* Clean Room Area */}
+                    {/* <h2 className="text-4xl font-bold text-center mb-16 dark:text-green-600 text-blue-500 ">Manufacturing Areas</h2>
                     <div className="container mx-auto px-4 py-16">
                         <div className="flex flex-col lg:flex-row items-center gap-12">
                             <motion.div
@@ -403,7 +401,6 @@ export default function AboutUs() {
                                 className="lg:w-1/2 w-full"
                             >
                                 <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-gradient-to-br from-blue-50 to-emerald-50 dark:from-gray-800 dark:to-gray-900">
-                                    {/* Image wrapper with proper aspect ratio */}
                                     <div className="aspect-[4/3] w-full">
                                         <div className="group relative w-full h-full transform transition-transform duration-700 hover:scale-105">
                                             <Image
@@ -419,13 +416,13 @@ export default function AboutUs() {
                                 </div>
                             </motion.div>
                         </div>
-                    </div>
+                    </div> */}
 
                     {/* Process Area */}
                     <div className="flex flex-col lg:flex-row-reverse items-center gap-12 mb-20">
                         <motion.div variants={fadeInFromRight} className="lg:w-1/2 w-full">
                             <h3 className="text-2xl font-bold mb-6 text-blue-600 dark:text-emerald-400">Process Area</h3>
-                            <ul className="space-y-4">
+                            <ul className="space-y-10">
                                 <li className="flex items-start gap-3">
                                     <div className="w-2 h-2 mt-2 bg-emerald-500 rounded-full"></div>
                                     <span>FFS Technology from USA for optimal filling operations</span>
