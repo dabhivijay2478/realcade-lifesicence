@@ -18,11 +18,15 @@ import { usePathname } from "next/navigation";
 const footerLinks = [
   { title: "Home", href: "/" },
   { title: "About Us", href: "/about" },
+  {
+    title: "Manufacturing Unit's", href: "/manufacturing"
+  },
   { title: "Manufacturing Unit 1", href: "/manufacturing/manufacturing-unit-1" },
   { title: "Manufacturing Unit 2", href: "/manufacturing/manufacturing-unit-2" },
   { title: "I.V. Fluids", href: "/products/IVfluids" },
   { title: "Gallery", href: "/gallery" },
   { title: "Blogs", href: "/blogs" },
+  { title: "Certification", href: "/certification" },
   { title: "Contact Us", href: "/contact-us" },
 ];
 
