@@ -29,6 +29,7 @@ const navItems = [
   { name: "Manufacturing Unit's", items: manufacturing, hasDropdown: true },
   { name: "Our Products", items: productItems, hasDropdown: true },
   { name: "Gallery", href: "/gallery" },
+  { name: "Blogs", href: "/blogs" },
   { name: "Contact Us", href: "/contact-us" }
 ];
 

@@ -45,6 +45,26 @@ import image23 from "@/Images/Clients/f3.jpg"
 import image24 from "@/Images/Clients/f4.jpg"
 
 import bgabout from "@/Images/aboutbg.jpg"
+import client1 from "@/Images/ValuableClients/client1.jpg"
+import client2 from "@/Images/ValuableClients/client2.jpg"
+import client3 from "@/Images/ValuableClients/client3.jpg"
+import client4 from "@/Images/ValuableClients/client4.jpg"
+import client5 from "@/Images/ValuableClients/client5.jpg"
+import client6 from "@/Images/ValuableClients/client6.jpg"
+import client7 from "@/Images/ValuableClients/client7.jpg"
+import client8 from "@/Images/ValuableClients/client8.jpg"
+import client9 from "@/Images/ValuableClients/client9.jpg"
+import client10 from "@/Images/ValuableClients/client10.jpg"
+import client11 from "@/Images/ValuableClients/client11.jpg"
+import client12 from "@/Images/ValuableClients/client12.jpg"
+import client13 from "@/Images/ValuableClients/client13.jpg"
+import client14 from "@/Images/ValuableClients/client14.jpg"
+import client15 from "@/Images/ValuableClients/client15.jpg"
+import client16 from "@/Images/ValuableClients/client16.jpg"
+import client17 from "@/Images/ValuableClients/client17.jpg"
+import client18 from "@/Images/ValuableClients/client18.jpg"
+import client19 from "@/Images/ValuableClients/client19.jpg"
+
 import Link from 'next/link';
 const fadeIn = {
     initial: { opacity: 0, y: 20 },
@@ -87,6 +107,25 @@ const galleryData = {
         { id: 22, src: image22, alt: "Client " },
         { id: 23, src: image23, alt: "Client " },
         { id: 24, src: image24, alt: "Client " },
+        { id: 25, src: client1, alt: "Client " },
+        { id: 26, src: client2, alt: "Client " },
+        { id: 27, src: client3, alt: "Client " },
+        { id: 28, src: client4, alt: "Client " },
+        { id: 29, src: client5, alt: "Client " },
+        { id: 30, src: client6, alt: "Client " },
+        { id: 31, src: client7, alt: "Client " },
+        { id: 32, src: client8, alt: "Client " },
+        { id: 33, src: client9, alt: "Client " },
+        { id: 34, src: client10, alt: "Client " },
+        { id: 35, src: client11, alt: "Client " },
+        { id: 36, src: client12, alt: "Client " },
+        { id: 37, src: client13, alt: "Client " },
+        { id: 38, src: client14, alt: "Client " },
+        { id: 39, src: client15, alt: "Client " },
+        { id: 40, src: client16, alt: "Client " },
+        { id: 41, src: client17, alt: "Client " },
+        { id: 42, src: client18, alt: "Client " },
+        { id: 43, src: client19, alt: "Client " },
     ],
 };
 const fadeInUp = {
