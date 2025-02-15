@@ -238,12 +238,7 @@ export default function AboutUs() {
                         </motion.div>
                     </div>
                     <div className='space-y-4 text-gray-800 dark:text-white/90 text-justify text-lg mt-3'>
-                        <p>
-                            Our cutting-edge facilities, combined with a team of skilled professionals, enable us to deliver consistent, reliable, and safe products that cater to the diverse needs of healthcare providers and patients worldwide.
-                        </p>
-                        <p>
-                            With a strong presence in both domestic and international markets, we have established ourselves as a trusted leader in the IV Parenteral Formulation industry. Our focus on innovation, quality assurance, and customer satisfaction has earned us recognition as a preferred partner for pharmaceutical solutions. As we continue to expand, we remain dedicated to advancing healthcare by providing high-quality, life-saving products to markets across the globe.
-                        </p>
+                        <p> Our advanced facilities and expert team ensure reliable, safe products for global healthcare needs. </p> <p> As a leader in IV Parenteral Formulations, we prioritize innovation, quality, and customer satisfaction, delivering life-saving solutions worldwide. </p>
                     </div>
                 </div>
             </motion.section>
@@ -280,45 +275,13 @@ export default function AboutUs() {
                                 </span>
                             </h1>
                             <div className="space-y-4 text-gray-800 dark:text-white/90 text-justify text-lg mt-3">
-                                <p>
-                                    <span className='dark:text-blue-600 text-green-500 px-1'>
-                                        Bharat Vihol
-                                    </span>
-                                    currently serves as the  <span className="  dark:text-green-600 text-blue-500">
-                                        Director, Realcade Lifescience Pvt. Ltd.
-                                    </span>, where he plays a pivotal role in shaping the company’s strategic direction and driving its success. With over 25 years of experience in the pharmaceutical industry, particularly in BFS and FFS technology for IV Fluids and Pharmaceutical Formulation Manufacturing, Bharat has earned a reputation for excellence and innovation.
-                                </p>
-                                <p>
-                                    His extensive expertise spans across all aspects of pharmaceutical formulation plant development, including the installation of machinery, design modifications, and the execution of complex IV Fluid projects. His deep understanding of both oral and injectable formulations, along with respiratory solutions, has been instrumental in the establishment and growth of  <span className="  dark:text-green-600 text-blue-500">
-                                        Realcade Lifescience Pvt. Ltd.
-                                    </span>. under his leadership.
-                                </p>
+                                <p> <span className='dark:text-blue-600 text-green-500 px-1'>Bharat Vihol</span> is the Director of <span className="dark:text-green-600 text-blue-500">Realcade Lifescience Pvt. Ltd.</span>, leading its strategic growth with 25+ years of expertise in BFS and FFS technology for IV Fluids and Pharmaceutical Formulations. </p> <p> His expertise in plant development, machinery installation, and IV Fluid projects has been key to Realcade’s success in oral, injectable, and respiratory solutions. </p>
                             </div>
                         </motion.div>
                     </div>
                 </div>
                 <div className='text-lg px-6 mt-3 text-justify'>
-                    <p className='text-lg  mt-3'>
-                        <span className='dark:text-blue-600 text-green-500 px-1 text-lg'>
-                            Bharat Vihol
-                        </span>  contribution to the pharmaceutical sector has been nothing short of transformative. His ability to blend technical proficiency with strategic foresight has enabled  <span className="  dark:text-green-600 text-blue-500">
-                            Realcade Lifescience
-                        </span> to emerge as a recognized leader in the manufacturing of sterile liquids. His strong focus on operational efficiency, quality assurance, and client satisfaction has consistently delivered outstanding results, positioning the company for continued success in both domestic and international markets.
-                    </p>
-                    <p className='text-lg  mt-3'>
-                        Since assuming his role as , <span className='dark:text-blue-600 text-green-500 px-1 text-lg'>
-                            Director Bharat Vihol
-                        </span> has been a driving force behind the company’s rapid growth, fostering an environment of innovation and excellence. His dedication to continuous improvement and customer-centric approach ensures that <span className="  dark:text-green-600 text-blue-500">
-                            Realcade Lifescience
-                        </span> remains at the forefront of the pharmaceutical industry, consistently meeting and exceeding the expectations of its clients and stakeholders.
-                    </p>
-                    <p className='text-lg  mt-3'>
-                        With his leadership and expertise, <span className='dark:text-blue-600 text-green-500 px-1 text-lg'>
-                            Bharat Vihol
-                        </span> continues to steer the company towards new milestones, ensuring that <span className="  dark:text-green-600 text-blue-500">
-                            Realcade Lifescience Pvt. Ltd.
-                        </span>. remains synonymous with high-quality pharmaceutical solutions and cutting-edge technology.
-                    </p>
+                    <p className='text-lg mt-3'> <span className='dark:text-blue-600 text-green-500 px-1 text-lg'>Bharat Vihol</span> has transformed the pharmaceutical sector, driving <span className="dark:text-green-600 text-blue-500">Realcade Lifescience</span> to industry leadership in sterile liquid manufacturing through innovation, efficiency, and quality. </p> <p className='text-lg mt-3'> As Director, he fosters growth, ensuring excellence and customer satisfaction, keeping <span className="dark:text-green-600 text-blue-500">Realcade Lifescience</span> at the forefront of the industry. </p> <p className='text-lg mt-3'> With his leadership, <span className='dark:text-blue-600 text-green-500 px-1 text-lg'>Bharat Vihol</span> continues to drive <span className="dark:text-green-600 text-blue-500">Realcade Lifescience Pvt. Ltd.</span> toward new milestones in pharmaceutical innovation. </p>
                 </div>
             </motion.section>
             {/* Our Strength Section */}
