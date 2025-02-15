@@ -60,7 +60,7 @@ export default function DetailedFacilitiesBlog() {
                     <Card className="bg-white shadow-xl">
                         <CardContent className="p-8">
                             <div className="prose max-w-none">
-                                <h2 className="text-2xl font-bold mb-4">Manufacturing Excellence Since 2013</h2>
+                                <h2 className="text-2xl font-bold mb-4 text-gray-900">Manufacturing Excellence Since 2013</h2>
                                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
                                     Realcade Lifescience Pvt. Ltd. has established itself as a pioneer in sterile liquid
                                     parenterals manufacturing, particularly specializing in intravenous (I.V.) fluids. Our
@@ -87,7 +87,7 @@ export default function DetailedFacilitiesBlog() {
                                     <div className="bg-blue-100 p-2 rounded-lg">
                                         <Target className="h-6 w-6 text-blue-600" />
                                     </div>
-                                    <h3 className="text-lg font-bold">Production Capacity</h3>
+                                    <h3 className="text-lg font-bold text-gray-900">Production Capacity</h3>
                                 </div>
                                 <p className="text-gray-700">Advanced facilities capable of producing both 500ml and 100ml I.V. fluid containers</p>
                             </CardContent>
@@ -98,7 +98,7 @@ export default function DetailedFacilitiesBlog() {
                                     <div className="bg-purple-100 p-2 rounded-lg">
                                         <Shield className="h-6 w-6 text-purple-600" />
                                     </div>
-                                    <h3 className="text-lg font-bold">Quality Standards</h3>
+                                    <h3 className="text-lg font-bold text-gray-900">Quality Standards</h3>
                                 </div>
                                 <p className="text-gray-700">Class-A filling conditions with Class-C background environments</p>
                             </CardContent>
@@ -109,7 +109,7 @@ export default function DetailedFacilitiesBlog() {
                                     <div className="bg-green-100 p-2 rounded-lg">
                                         <Settings className="h-6 w-6 text-green-600" />
                                     </div>
-                                    <h3 className="text-lg font-bold">Technology</h3>
+                                    <h3 className="text-lg font-bold text-gray-900">Technology</h3>
                                 </div>
                                 <p className="text-gray-700">USA-sourced Form-Fill-Seal (FFS) technology for optimal sterility</p>
                             </CardContent>
@@ -129,7 +129,7 @@ export default function DetailedFacilitiesBlog() {
                             <div className="grid md:grid-cols-2 gap-12">
                                 <div className="space-y-6">
                                     <div>
-                                        <h3 className="text-xl font-bold mb-4">Location & Infrastructure</h3>
+                                        <h3 className="text-xl font-bold mb-4 text-gray-900">Location & Infrastructure</h3>
                                         <p className="text-gray-700 leading-relaxed">
                                             Situated at Survey No. 891-892, near Y-Junction Narmada Canal, Karannagar, Kadi,
                                             our primary facility is strategically positioned for optimal logistics and
@@ -138,26 +138,26 @@ export default function DetailedFacilitiesBlog() {
                                         </p>
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-bold mb-4">Production Capabilities</h3>
+                                        <h3 className="text-xl font-bold mb-4 text-gray-900" >Production Capabilities</h3>
                                         <ul className="space-y-4">
                                             <li className="flex items-start gap-3">
                                                 <BadgeCheck className="h-5 w-5 text-blue-600 mt-1" />
                                                 <div>
-                                                    <p className="font-semibold">500ml I.V. Fluid Production</p>
+                                                    <p className="font-semibold text-gray-900">500ml I.V. Fluid Production</p>
                                                     <p className="text-gray-600">Specialized in large volume parenteral solutions</p>
                                                 </div>
                                             </li>
                                             <li className="flex items-start gap-3">
                                                 <BadgeCheck className="h-5 w-5 text-blue-600 mt-1" />
                                                 <div>
-                                                    <p className="font-semibold">9,000L Manufacturing Vessel</p>
+                                                    <p className="font-semibold text-gray-900">9,000L Manufacturing Vessel</p>
                                                     <p className="text-gray-600">SS 316L grade for superior quality</p>
                                                 </div>
                                             </li>
                                             <li className="flex items-start gap-3">
                                                 <BadgeCheck className="h-5 w-5 text-blue-600 mt-1" />
                                                 <div>
-                                                    <p className="font-semibold">6,000L Storage Capacity</p>
+                                                    <p className="font-semibold text-gray-900">6,000L Storage Capacity</p>
                                                     <p className="text-gray-600">Temperature-controlled storage solutions</p>
                                                 </div>
                                             </li>
@@ -166,7 +166,7 @@ export default function DetailedFacilitiesBlog() {
                                 </div>
                                 <div className="space-y-6">
                                     <div>
-                                        <h3 className="text-xl font-bold mb-4">Technology & Equipment</h3>
+                                        <h3 className="text-xl font-bold mb-4 text-gray-900">Technology & Equipment</h3>
                                         <div className="bg-blue-50 p-6 rounded-lg">
                                             <h4 className="font-semibold mb-3">USA FFS Technology Features:</h4>
                                             <ul className="space-y-3">
@@ -190,7 +190,7 @@ export default function DetailedFacilitiesBlog() {
                                         </div>
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-bold mb-4">Quality Control Measures</h3>
+                                        <h3 className="text-xl font-bold mb-4 text-gray-900">Quality Control Measures</h3>
                                         <p className="text-gray-700 leading-relaxed">
                                             The facility maintains Class-A conditions during the filling process, supported by
                                             a Class-C background environment. This is achieved through advanced HVAC systems
@@ -215,7 +215,7 @@ export default function DetailedFacilitiesBlog() {
                             <div className="grid md:grid-cols-2 gap-12">
                                 <div className="space-y-6">
                                     <div>
-                                        <h3 className="text-xl font-bold mb-4">Facility Overview</h3>
+                                        <h3 className="text-xl font-bold mb-4 text-gray-900">Facility Overview</h3>
                                         <p className="text-gray-700 leading-relaxed">
                                             Located at Plot No. 1082/P, Takli Road, Valod, Tapi, our second unit complements
                                             our primary facility with specialized capabilities for smaller volume production.
@@ -224,26 +224,26 @@ export default function DetailedFacilitiesBlog() {
                                         </p>
                                     </div>
                                     <div className="bg-green-50 p-6 rounded-lg">
-                                        <h4 className="font-semibold mb-3">Key Specifications:</h4>
+                                        <h4 className="font-semibold mb-3 text-gray-900">Key Specifications:</h4>
                                         <ul className="space-y-3">
                                             <li className="flex items-start gap-3">
                                                 <ChevronRight className="h-5 w-5 text-green-600 mt-1" />
                                                 <div>
-                                                    <p className="font-semibold">Manufacturing Vessel</p>
+                                                    <p className="font-semibold text-gray-900">Manufacturing Vessel</p>
                                                     <p className="text-gray-600">4,000L SS 316L grade</p>
                                                 </div>
                                             </li>
                                             <li className="flex items-start gap-3">
                                                 <ChevronRight className="h-5 w-5 text-green-600 mt-1" />
                                                 <div>
-                                                    <p className="font-semibold">Storage Capacity</p>
+                                                    <p className="font-semibold text-gray-900">Storage Capacity</p>
                                                     <p className="text-gray-600">3,000L temperature-controlled</p>
                                                 </div>
                                             </li>
                                             <li className="flex items-start gap-3">
                                                 <ChevronRight className="h-5 w-5 text-green-600 mt-1" />
                                                 <div>
-                                                    <p className="font-semibold">Production Focus</p>
+                                                    <p className="font-semibold text-gray-900">Production Focus</p>
                                                     <p className="text-gray-600">100ml I.V. fluid specialization</p>
                                                 </div>
                                             </li>
@@ -251,14 +251,14 @@ export default function DetailedFacilitiesBlog() {
                                     </div>
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold mb-4">Advanced Features</h3>
+                                    <h3 className="text-xl font-bold mb-4 text-gray-900">Advanced Features</h3>
                                     <div className="space-y-6">
                                         <div className="flex items-start gap-4">
                                             <div className="bg-green-100 p-3 rounded-lg">
                                                 <Settings className="h-6 w-6 text-green-600" />
                                             </div>
                                             <div>
-                                                <h4 className="text-lg font-semibold mb-2">Process Automation</h4>
+                                                <h4 className="text-lg font-semibold mb-2 text-gray-900">Process Automation</h4>
                                                 <p className="text-gray-700">
                                                     Integrated automation systems control critical parameters throughout the
                                                     manufacturing process, ensuring consistency and reliability in production.
@@ -270,7 +270,7 @@ export default function DetailedFacilitiesBlog() {
                                                 <Shield className="h-6 w-6 text-green-600" />
                                             </div>
                                             <div>
-                                                <h4 className="text-lg font-semibold mb-2">Quality Systems</h4>
+                                                <h4 className="text-lg font-semibold mb-2 text-gray-900">Quality Systems</h4>
                                                 <p className="text-gray-700">
                                                     Comprehensive quality management system with real-time monitoring and
                                                     documentation of critical process parameters.
@@ -282,7 +282,7 @@ export default function DetailedFacilitiesBlog() {
                                                 <PackageCheck className="h-6 w-6 text-green-600" />
                                             </div>
                                             <div>
-                                                <h4 className="text-lg font-semibold mb-2">Packaging Excellence</h4>
+                                                <h4 className="text-lg font-semibold mb-2 text-gray-900">Packaging Excellence</h4>
                                                 <p className="text-gray-700">
                                                     State-of-the-art packaging line with automated inspection systems and
                                                     advanced sealing technologies for product integrity.

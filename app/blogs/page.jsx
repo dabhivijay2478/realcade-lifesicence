@@ -52,7 +52,7 @@ const BlogPage = () => {
 
             {/* Featured Post */}
             <div className="container mx-auto px-4 -mt-10">
-                <Card className=" shadow-xl">
+                <Card className="bg-white shadow-xl">
                     <div className="grid md:grid-cols-2 gap-6">
                         <div className="relative h-64 md:h-full">
                             <Image
@@ -66,10 +66,10 @@ const BlogPage = () => {
                                 <Award className="h-5 w-5 text-blue-600" />
                                 <p className="text-blue-600 font-semibold">FEATURED</p>
                             </div>
-                            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">
                                 State-of-the-Art Manufacturing Facility
                             </h2>
-                            <p className="text-gray-600 mb-6">
+                            <p className="text-gray-600   mb-6">
                                 13,200 Sq. Mt. facility with 5,800 Sq. Mt. plot area, featuring advanced FFS Technology
                                 and a monthly production capacity of 4.5 million bottles. WHO GMP certified facility
                                 maintaining excellence in pharmaceutical manufacturing.
@@ -94,7 +94,7 @@ const BlogPage = () => {
                 <h2 className="text-3xl font-bold mb-8">Latest Updates</h2>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {blogPosts.map((post, index) => (
-                        <Card key={index} className="hover:shadow-lg transition-shadow">
+                        <Card key={index} className="bg-white hover:shadow-lg transition-shadow">
                             <div className="relative h-48">
                                 <Image
                                     src={post.img}
@@ -108,10 +108,10 @@ const BlogPage = () => {
                             <CardHeader>
                                 <div className="flex items-center justify-between mb-2">
                                     <span className="text-sm text-blue-600">{post.category}</span>
-                                    <span className="text-sm text-gray-500">{post.readTime}</span>
+                                    <span className="text-sm text-gray-900">{post.readTime}</span>
                                 </div>
-                                <CardTitle className="text-xl mb-2">{post.title}</CardTitle>
-                                <p className="text-gray-600">{post.excerpt}</p>
+                                <CardTitle className="text-xl mb-2 text-gray-900">{post.title}</CardTitle>
+                                <p className="text-gray-600 ">{post.excerpt}</p>
                             </CardHeader>
                             <CardContent>
                                 <Link href={post?.href || '#'} >
@@ -130,21 +130,21 @@ const BlogPage = () => {
                 <div className="container mx-auto px-4">
                     <h2 className="text-3xl font-bold mb-8 text-center">Company Highlights</h2>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <Card className="text-center p-6">
+                        <Card className="bg-white text-center p-6">
                             <h3 className="text-3xl font-bold text-blue-600 mb-2">₹111+ Cr</h3>
-                            <p className="text-gray-600">Annual Turnover 2022-23</p>
+                            <p className="text-gray-600 ">Annual Turnover 2022-23</p>
                         </Card>
-                        <Card className="text-center p-6">
+                        <Card className="bg-white text-center p-6">
                             <h3 className="text-3xl font-bold text-blue-600 mb-2">4.5M</h3>
-                            <p className="text-gray-600">Monthly Bottle Capacity</p>
+                            <p className="text-gray-600 ">Monthly Bottle Capacity</p>
                         </Card>
-                        <Card className="text-center p-6">
+                        <Card className="bg-white text-center p-6">
                             <h3 className="text-3xl font-bold text-blue-600 mb-2">12+</h3>
-                            <p className="text-gray-600">Countries Served</p>
+                            <p className="text-gray-600 ">Countries Served</p>
                         </Card>
-                        <Card className="text-center p-6">
+                        <Card className="bg-white text-center p-6">
                             <h3 className="text-3xl font-bold text-blue-600 mb-2">25+</h3>
-                            <p className="text-gray-600">Years Experience</p>
+                            <p className="text-gray-600 ">Years Experience</p>
                         </Card>
                     </div>
                 </div>

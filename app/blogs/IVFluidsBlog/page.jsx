@@ -63,7 +63,7 @@ export default function ManufacturingBlog() {
                             <Card key={index} className="bg-white shadow-lg hover:shadow-xl transition-all">
                                 <CardContent className="p-6">
                                     <IconComponent className={`h-8 w-8 ${stat.color} mb-4`} />
-                                    <div className="text-3xl font-bold mb-2">{stat.value}</div>
+                                    <div className="text-3xl font-bold mb-2 text-gray-900">{stat.value}</div>
                                     <div className="text-gray-600">{stat.label}</div>
                                 </CardContent>
                             </Card>
@@ -76,7 +76,7 @@ export default function ManufacturingBlog() {
             <main className="container mx-auto px-4 max-w-4xl">
                 {/* Introduction */}
                 <div className="prose max-w-none mb-12">
-                    <p className="text-xl text-gray-700 leading-relaxed">
+                    <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
                         Realcade Lifescience Pvt. Ltd., established in 2013 in Kadi-Mehsana, Gujarat, has emerged as a
                         leading manufacturer of sterile liquid parenterals, specializing in intravenous (I.V.) fluids.
                         Our commitment to manufacturing excellence is evident through advanced technologies, stringent
@@ -122,7 +122,7 @@ export default function ManufacturingBlog() {
                     <div className="grid md:grid-cols-2 gap-6 mb-8">
                         <Card className="bg-white">
                             <CardContent className="p-6">
-                                <h3 className="text-xl font-bold mb-4">LVP-1 Unit</h3>
+                                <h3 className="text-xl font-bold mb-4 text-gray-900">LVP-1 Unit</h3>
                                 <ul className="space-y-3 text-gray-700">
                                     <li className="flex items-center gap-2">
                                         <BadgeCheck className="h-5 w-5 text-green-600 flex-shrink-0" />
@@ -141,7 +141,7 @@ export default function ManufacturingBlog() {
                         </Card>
                         <Card className="bg-white">
                             <CardContent className="p-6">
-                                <h3 className="text-xl font-bold mb-4">LVP-2 & LVP-3 Units</h3>
+                                <h3 className="text-xl font-bold mb-4 text-gray-900">LVP-2 & LVP-3 Units</h3>
                                 <ul className="space-y-3 text-gray-700">
                                     <li className="flex items-center gap-2">
                                         <BadgeCheck className="h-5 w-5 text-green-600 flex-shrink-0" />

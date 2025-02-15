@@ -13,26 +13,7 @@ import {
 } from 'lucide-react';
 
 export default function GlobalPresenceBlog() {
-    const globalPartners = [
-        {
-            country: "Belgium",
-            type: "Medical-grade Materials",
-            icon: PackageCheck,
-            color: "text-blue-600"
-        },
-        {
-            country: "South Korea",
-            type: "Equipment & Technology",
-            icon: Factory,
-            color: "text-green-600"
-        },
-        {
-            country: "United States",
-            type: "Advanced Machinery",
-            icon: Shield,
-            color: "text-purple-600"
-        }
-    ];
+    
 
     return (
         <article className="min-h-screen ">
@@ -62,7 +43,7 @@ export default function GlobalPresenceBlog() {
                             <div className="flex items-center gap-4 mb-6">
                                 <Building2 className="h-8 w-8 text-blue-600" />
                                 <div>
-                                    <h2 className="text-2xl font-bold">Realcade Lifescience Pvt. Ltd.</h2>
+                                    <h2 className="text-2xl font-bold text-gray-900 ">Realcade Lifescience Pvt. Ltd.</h2>
                                     <p className="text-gray-600">Kadi, Gujarat, India</p>
                                 </div>
                             </div>
@@ -82,23 +63,10 @@ export default function GlobalPresenceBlog() {
                         <Map className="h-8 w-8 text-blue-600" />
                         <h2 className="text-3xl font-bold">International Partnerships</h2>
                     </div>
-                    <div className="grid md:grid-cols-3 gap-6 mb-8">
-                        {globalPartners.map((partner, index) => {
-                            const IconComponent = partner.icon;
-                            return (
-                                <Card key={index} className="bg-white hover:shadow-lg transition-shadow">
-                                    <CardContent className="p-6">
-                                        <IconComponent className={`h-8 w-8 ${partner.color} mb-4`} />
-                                        <h3 className="text-xl font-bold mb-2">{partner.country}</h3>
-                                        <p className="text-gray-600">{partner.type}</p>
-                                    </CardContent>
-                                </Card>
-                            );
-                        })}
-                    </div>
+                   
                     <Card className="bg-gradient-to-br from-blue-50 to-white mb-8">
                         <CardContent className="p-8">
-                            <h3 className="text-xl font-bold mb-4">Global Procurement Excellence</h3>
+                            <h3 className="text-xl font-bold mb-4 text-gray-900">Global Procurement Excellence</h3>
                             <p className="text-gray-700 leading-relaxed">
                                 Our international sourcing strategy ensures access to the highest quality
                                 materials and cutting-edge technology. We maintain strategic partnerships
@@ -118,7 +86,7 @@ export default function GlobalPresenceBlog() {
                     <div className="grid md:grid-cols-2 gap-6 mb-8">
                         <Card className="bg-gradient-to-br from-purple-50 to-white">
                             <CardContent className="p-6">
-                                <h3 className="text-xl font-bold mb-4">Industry Standards</h3>
+                                <h3 className="text-xl font-bold mb-4 text-gray-900">Industry Standards</h3>
                                 <ul className="space-y-4">
                                     <li className="flex items-start gap-3">
                                         <CheckCircle2 className="h-6 w-6 text-purple-600 flex-shrink-0 mt-1" />
@@ -137,7 +105,7 @@ export default function GlobalPresenceBlog() {
                         </Card>
                         <Card className="bg-gradient-to-br from-blue-50 to-white">
                             <CardContent className="p-6">
-                                <h3 className="text-xl font-bold mb-4">Quality Commitment</h3>
+                                <h3 className="text-xl font-bold mb-4 text-gray-900">Quality Commitment</h3>
                                 <ul className="space-y-4">
                                     <li className="flex items-start gap-3">
                                         <FileCheck className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
