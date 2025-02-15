@@ -7,6 +7,8 @@ import { ChevronDown, Phone, Mail, MapPin, Clock } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
 import logo from "@/Images/logo.png";
 import { usePathname } from "next/navigation";
+
+// Navigation Data
 const productItems = [
   { name: "I.V. Fluids", href: "/products/IVfluids" }
 ];
@@ -26,14 +28,24 @@ const contactInfo = [
 const navItems = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
-  { name: "Manufacturing Unit's", items: manufacturing, hasDropdown: true },
-  { name: "Our Products", items: productItems, hasDropdown: true },
+  {
+    name: "Manufacturing Unit's",
+    href: "/manufacturing",
+    items: manufacturing,
+    hasDropdown: true
+  },
+  {
+    name: "Our Products",
+    href: "/products",
+    items: productItems,
+    hasDropdown: true
+  },
   { name: "Gallery", href: "/gallery" },
   { name: "Blogs", href: "/blogs" },
   { name: "Contact Us", href: "/contact-us" }
 ];
 
-// Enhanced animation variants
+// Animation Variants
 const fadeInUp = {
   initial: { opacity: 0, y: -20 },
   animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
@@ -53,8 +65,13 @@ const menuVariants = {
   }
 };
 
+// Dropdown Menu Component
 const DropdownMenu = ({ items, isOpen, onMouseEnter, onMouseLeave }) => (
-  <div className="relative" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+  <div
+    className="relative"
+    onMouseEnter={onMouseEnter}
+    onMouseLeave={onMouseLeave}
+  >
     <AnimatePresence>
       {isOpen && (
         <motion.div
@@ -70,7 +87,10 @@ const DropdownMenu = ({ items, isOpen, onMouseEnter, onMouseLeave }) => (
               whileHover={{ x: 4, backgroundColor: "rgba(0,0,0,0.05)" }}
               className="group px-4 py-3 transition-all duration-300"
             >
-              <Link href={item.href} className="block text-sm font-medium group-hover:text-primary">
+              <Link
+                href={item.href}
+                className="block text-sm font-medium group-hover:text-primary"
+              >
                 {item.name}
               </Link>
             </motion.div>
@@ -81,18 +101,21 @@ const DropdownMenu = ({ items, isOpen, onMouseEnter, onMouseLeave }) => (
   </div>
 );
 
+// Main Navbar Component
 const Navbar = () => {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  // Scroll Effect
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Click Outside Handler
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (mobileMenuOpen && !e.target.closest('.mobile-menu') && !e.target.closest('.menu-trigger')) {
@@ -103,6 +126,7 @@ const Navbar = () => {
     return () => document.removeEventListener('click', handleClickOutside);
   }, [mobileMenuOpen]);
 
+  // Active Link Checker
   const isLinkActive = (href) => {
     if (href === '/') {
       return pathname === href;
@@ -120,8 +144,8 @@ const Navbar = () => {
       <motion.div
         {...fadeInUp}
         className={`hidden lg:block w-full ${scrolled
-          ? 'bg-background/80 backdrop-blur-xl shadow-lg'
-          : 'bg-background'
+            ? 'bg-background/80 backdrop-blur-xl shadow-lg'
+            : 'bg-background'
           } transition-all duration-500`}
       >
         <div className="max-w-screen-xl mx-auto px-6 py-3">
@@ -154,13 +178,13 @@ const Navbar = () => {
         </div>
       </motion.div>
 
-      {/* Main Navbar */}
+      {/* Main Navigation */}
       <motion.nav
         initial={fadeInUp.initial}
         animate={fadeInUp.animate}
         className={`w-full ${scrolled
-          ? 'bg-background/80 backdrop-blur-xl shadow-lg'
-          : 'bg-background'
+            ? 'bg-background/80 backdrop-blur-xl shadow-lg'
+            : 'bg-background'
           } transition-all duration-500`}
       >
         <div className="max-w-screen-xl mx-auto px-6 py-4">
@@ -174,10 +198,11 @@ const Navbar = () => {
               <Link href="/">
                 <Image
                   src={logo}
-                  width={900}
-                  height={900}
+                  width={800}
+                  height={800}
                   alt="logo"
-                  className="w-auto h-10 sm:h-12"
+                  className="w-96 h-10 sm:h-12"
+                  priority
                 />
               </Link>
             </motion.div>
@@ -186,7 +211,7 @@ const Navbar = () => {
             <div className="hidden lg:flex items-center gap-8">
               {navItems.map((item) => {
                 const isActive = item.hasDropdown
-                  ? isDropdownActive(item.items)
+                  ? isDropdownActive(item.items) || isLinkActive(item.href)
                   : isLinkActive(item.href);
 
                 return (
@@ -201,10 +226,13 @@ const Navbar = () => {
                       whileTap={{ scale: 0.95 }}
                       className="flex items-center gap-1 cursor-pointer"
                     >
-                      {item.hasDropdown ? (
-                        <span className={`transition-colors duration-300 font-medium ${isActive ? 'text-green-500' : 'text-blue-500 hover:text-green-500'
-                          }`}>
-                          {item.name}
+                      <Link
+                        href={item.href}
+                        className={`transition-colors duration-300 font-medium ${isActive ? 'text-green-500' : 'text-blue-500 hover:text-green-500'
+                          }`}
+                      >
+                        {item.name}
+                        {item.hasDropdown && (
                           <motion.span
                             animate={{ rotate: openDropdown === item.name ? 180 : 0 }}
                             transition={{ duration: 0.3 }}
@@ -212,16 +240,8 @@ const Navbar = () => {
                           >
                             <ChevronDown className="h-4 w-4" />
                           </motion.span>
-                        </span>
-                      ) : (
-                        <Link
-                          href={item.href}
-                          className={`transition-colors duration-300 font-medium ${isActive ? 'text-green-500' : 'text-blue-500 hover:text-green-500'
-                            }`}
-                        >
-                          {item.name}
-                        </Link>
-                      )}
+                        )}
+                      </Link>
                     </motion.div>
                     {item.hasDropdown && (
                       <DropdownMenu
@@ -229,7 +249,6 @@ const Navbar = () => {
                         isOpen={openDropdown === item.name}
                         onMouseEnter={() => setOpenDropdown(item.name)}
                         onMouseLeave={() => setOpenDropdown(null)}
-                        currentPath={pathname}
                       />
                     )}
                   </motion.div>
@@ -284,7 +303,7 @@ const Navbar = () => {
           <AnimatePresence>
             {mobileMenuOpen && (
               <motion.div
-                className="lg:hidden mobile-menu mt-2 overflow-hidden  rounded-xl border shadow-lg"
+                className="lg:hidden mobile-menu mt-2 overflow-hidden rounded-xl border shadow-lg"
                 variants={menuVariants}
                 initial="closed"
                 animate="open"
@@ -293,7 +312,7 @@ const Navbar = () => {
                 <div className="py-1 px-4 space-y-4">
                   {navItems.map((item) => {
                     const isActive = item.hasDropdown
-                      ? isDropdownActive(item.items)
+                      ? isDropdownActive(item.items) || isLinkActive(item.href)
                       : isLinkActive(item.href);
 
                     return (
@@ -302,53 +321,39 @@ const Navbar = () => {
                         whileHover={{ x: 4 }}
                         className="border-b border-border/50 last:border-none"
                       >
-                        {item.hasDropdown ? (
-                          <div className="py-3">
-                            <span className={`text-lg font-medium ${isActive ? 'text-green-500' : 'text-blue-500 hover:text-green-500'
-                              }`}>
-                              {item.name}
-                            </span>
+                        <motion.div className="py-3">
+                          <Link
+                            href={item.href}
+                            className={`text-lg transition-colors duration-300 ${isActive ? 'text-green-500' : 'text-blue-500 hover:text-green-500'
+                              }`}
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            {item.name}
+                          </Link>
+                          {item.hasDropdown && (
                             <div className="mt-2 pl-4 space-y-2">
-                              {item.items.map((subItem) => {
-                                const isSubItemActive = isLinkActive(subItem.href);
-                                return (
-                                  <motion.div
-                                    key={subItem.name}
-                                    whileHover={{ x: 4 }}
-                                    className="py-2"
+                              {item.items.map((subItem) => (
+                                <motion.div
+                                  key={subItem.name}
+                                  whileHover={{ x: 4 }}
+                                  className="py-2"
+                                >
+                                  <Link
+                                    href={subItem.href}
+                                    className="text-blue-500 hover:text-green-500 transition-colors duration-300"
+                                    onClick={() => setMobileMenuOpen(false)}
                                   >
-                                    <Link
-                                      href={subItem.href}
-                                      className={`transition-colors duration-300 ${isSubItemActive
-                                          ? 'text-green-500'
-                                          : 'text-blue-500 hover:text-green-500'
-                                        }`}
-                                      onClick={() => setMobileMenuOpen(false)}
-                                    >
-                                      {subItem.name}
-                                    </Link>
-                                  </motion.div>
-                                );
-                              })}
+                                    {subItem.name}
+                                  </Link>
+                                </motion.div>
+                              ))}
                             </div>
-                          </div>
-                        ) : (
-                          <motion.div className="py-3">
-                            <Link
-                              href={item.href}
-                              className={`text-lg transition-colors duration-300 ${isActive
-                                  ? 'text-green-500'
-                                  : 'text-blue-500 hover:text-green-500'
-                                }`}
-                              onClick={() => setMobileMenuOpen(false)}
-                            >
-                              {item.name}
-                            </Link>
-                          </motion.div>
-                        )}
+                          )}
+                        </motion.div>
                       </motion.div>
                     );
                   })}
+
                   {/* Mobile Contact Info */}
                   <div className="pt-4 space-y-4">
                     {contactInfo.map((item, index) => (
