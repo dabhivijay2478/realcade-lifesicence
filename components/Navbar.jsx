@@ -42,6 +42,7 @@ const navItems = [
   },
   { name: "Gallery", href: "/gallery" },
   { name: "Blogs", href: "/blogs" },
+  { name: "Certification", href: "/certification" },
   { name: "Contact Us", href: "/contact-us" }
 ];
 
@@ -144,8 +145,8 @@ const Navbar = () => {
       <motion.div
         {...fadeInUp}
         className={`hidden lg:block w-full ${scrolled
-            ? 'bg-background/80 backdrop-blur-xl shadow-lg'
-            : 'bg-background'
+          ? 'bg-background/80 backdrop-blur-xl shadow-lg'
+          : 'bg-background'
           } transition-all duration-500`}
       >
         <div className="max-w-screen-xl mx-auto px-6 py-3">
@@ -183,8 +184,8 @@ const Navbar = () => {
         initial={fadeInUp.initial}
         animate={fadeInUp.animate}
         className={`w-full ${scrolled
-            ? 'bg-background/80 backdrop-blur-xl shadow-lg'
-            : 'bg-background'
+          ? 'bg-background/80 backdrop-blur-xl shadow-lg'
+          : 'bg-background'
           } transition-all duration-500`}
       >
         <div className="max-w-screen-xl mx-auto px-6 py-4">
@@ -198,10 +199,10 @@ const Navbar = () => {
               <Link href="/">
                 <Image
                   src={logo}
-                  width={800}
-                  height={800}
+                  width={400}
+                  height={400}
                   alt="logo"
-                  className="w-96 h-10 sm:h-12"
+                  className="w-56 h-10 sm:h-12"
                   priority
                 />
               </Link>

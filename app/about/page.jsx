@@ -8,7 +8,7 @@ import bgabout from "@/Images/aboutbg.jpg";
 import medical from "@/Images/medicalabout.jpg";
 import filling from "@/Images/filling-area.png";
 import ReactPlayer from 'react-player';
-import CertificatesPage from '@/components/certification';
+// import CertificatesPage from '@/components/certification';
 import bhratvihol from "@/Images/Director-Photos/a1.jpg";
 import india from "@/Images/india.jpg";
 
@@ -486,16 +486,6 @@ export default function AboutUs() {
                 </div>
             </motion.section>
 
-
-
-            <motion.section
-                className="py-20"
-                initial="initial"
-                whileInView="animate"
-                viewport={{ once: true }}
-            >
-                <CertificatesPage />
-            </motion.section>
             <motion.section
                 className="py-20"
                 initial="initial"
