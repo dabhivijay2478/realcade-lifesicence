@@ -213,10 +213,10 @@ export default function AboutUs() {
                                 <p>
                                     <span className=" dark:text-green-600 text-blue-500 text-xl">
                                         RealCade LifeScience Pvt. Ltd
-                                    </span>., based in Kadi-Mehsana, Gujarat, is rapidly emerging as one of India’s most versatile manufacturers of sterile liquids, specializing in advanced Aseptic Form-Fill-Seal (FFS) Technology.
+                                    </span>., located in Kadi-Mehsana, Gujarat, is emerging as one of India’s leading manufacturers of sterile liquids, specializing in advanced Aseptic Form-Fill-Seal (FFS) Technology. Our cutting-edge manufacturing facilities allow us to produce IV Fluids in 100 ml and 500 ml volumes, along with a diverse product range that includes Formulations, Fluid Therapy, Respiratory Solutions, Diluents, and Injections. We are dedicated to maintaining the highest quality standards to meet global pharmaceutical regulations.
                                 </p>
                                 <p>
-                                    Our state-of-the-art manufacturing capabilities enable us to produce IV Fluids in 100 ml and 500 ml volumes, with a comprehensive product range that includes Formulations, Fluid Therapy, Respiratory Solutions, Diluents, and Injections. We are committed to maintaining the highest standards of quality, ensuring that our products meet the stringent requirements of global pharmaceutical regulations.
+                                    As a leader in IV Parenteral Formulations, RealCade LifeScience focuses on innovation, quality, and customer satisfaction. Our expert team and advanced facilities ensure the reliable, safe production of life-saving solutions that cater to healthcare needs worldwide.
                                 </p>
 
                             </div>
@@ -237,9 +237,7 @@ export default function AboutUs() {
                             </div>
                         </motion.div>
                     </div>
-                    <div className='space-y-4 text-gray-800 dark:text-white/90 text-justify text-lg mt-3'>
-                        <p> Our advanced facilities and expert team ensure reliable, safe products for global healthcare needs. </p> <p> As a leader in IV Parenteral Formulations, we prioritize innovation, quality, and customer satisfaction, delivering life-saving solutions worldwide. </p>
-                    </div>
+
                 </div>
             </motion.section>
             <motion.section
@@ -275,14 +273,16 @@ export default function AboutUs() {
                                 </span>
                             </h1>
                             <div className="space-y-4 text-gray-800 dark:text-white/90 text-justify text-lg mt-3">
-                                <p> <span className='dark:text-blue-600 text-green-500 px-1'>Bharat Vihol</span> is the Director of <span className="dark:text-green-600 text-blue-500">Realcade Lifescience Pvt. Ltd.</span>, leading its strategic growth with 25+ years of expertise in BFS and FFS technology for IV Fluids and Pharmaceutical Formulations. </p> <p> His expertise in plant development, machinery installation, and IV Fluid projects has been key to Realcade’s success in oral, injectable, and respiratory solutions. </p>
+                                <p>
+                                    <span className='dark:text-blue-600 text-green-500 px-1'>Bharat Vihol</span> is the Director of <span className="dark:text-green-600 text-blue-500">Realcade Lifescience Pvt. Ltd.</span>, brings over 25 years of expertise in BFS and FFS technology for IV Fluids and Pharmaceutical Formulations. His deep knowledge of plant development, machinery installation, and IV Fluid projects has been instrumental in the company’s growth, making Realcade a leader in oral, injectable, and respiratory solutions. </p>
+                            </div>
+                            <div className='text-lg  mt-3 text-justify'>
+                                <p className='text-lg mt-3'> Under his leadership, Realcade Lifescience has risen to prominence in sterile liquid manufacturing, consistently driving innovation, efficiency, and quality. Bharat’s commitment to excellence and customer satisfaction has ensured Realcade’s continued success and positioned the company at the forefront of the pharmaceutical industry. </p>
                             </div>
                         </motion.div>
                     </div>
                 </div>
-                <div className='text-lg px-6 mt-3 text-justify'>
-                    <p className='text-lg mt-3'> <span className='dark:text-blue-600 text-green-500 px-1 text-lg'>Bharat Vihol</span> has transformed the pharmaceutical sector, driving <span className="dark:text-green-600 text-blue-500">Realcade Lifescience</span> to industry leadership in sterile liquid manufacturing through innovation, efficiency, and quality. </p> <p className='text-lg mt-3'> As Director, he fosters growth, ensuring excellence and customer satisfaction, keeping <span className="dark:text-green-600 text-blue-500">Realcade Lifescience</span> at the forefront of the industry. </p> <p className='text-lg mt-3'> With his leadership, <span className='dark:text-blue-600 text-green-500 px-1 text-lg'>Bharat Vihol</span> continues to drive <span className="dark:text-green-600 text-blue-500">Realcade Lifescience Pvt. Ltd.</span> toward new milestones in pharmaceutical innovation. </p>
-                </div>
+
             </motion.section>
             {/* Our Strength Section */}
             <motion.section

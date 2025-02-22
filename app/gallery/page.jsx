@@ -26,7 +26,7 @@ import image11 from "@/Images/Health-Minister-Visit/b3.jpg"
 import image12 from "@/Images/Health-Minister-Visit/b4.jpg"
 
 //plants
-import image13 from "@/Images/Sucessfull-Plants/d1.jpg"
+import image13 from "@/Images/Sucessfull-Plants/d1.jpeg"
 import image14 from "@/Images/Sucessfull-Plants/d2.jpg"
 import image15 from "@/Images/Sucessfull-Plants/d3.jpg"
 import image16 from "@/Images/Sucessfull-Plants/d4.jpg"
@@ -108,24 +108,24 @@ const galleryData = {
         { id: 23, src: image23, alt: "Client " },
         { id: 24, src: image24, alt: "Client " },
         { id: 25, src: client1, alt: "Client " },
-        { id: 26, src: client2, alt: "Client " },
-        { id: 27, src: client3, alt: "Client " },
+        // { id: 26, src: client2, alt: "Client " },
+        // { id: 27, src: client3, alt: "Client " },
         { id: 28, src: client4, alt: "Client " },
         { id: 29, src: client5, alt: "Client " },
-        { id: 30, src: client6, alt: "Client " },
-        { id: 31, src: client7, alt: "Client " },
+        // { id: 30, src: client6, alt: "Client " },
+        // { id: 31, src: client7, alt: "Client " },
         { id: 32, src: client8, alt: "Client " },
-        { id: 33, src: client9, alt: "Client " },
-        { id: 34, src: client10, alt: "Client " },
+        // { id: 33, src: client9, alt: "Client " },
+        // { id: 34, src: client10, alt: "Client " },
         { id: 35, src: client11, alt: "Client " },
         { id: 36, src: client12, alt: "Client " },
-        { id: 37, src: client13, alt: "Client " },
-        { id: 38, src: client14, alt: "Client " },
+        // { id: 37, src: client13, alt: "Client " },
+        // { id: 38, src: client14, alt: "Client " },
         { id: 39, src: client15, alt: "Client " },
-        { id: 40, src: client16, alt: "Client " },
-        { id: 41, src: client17, alt: "Client " },
-        { id: 42, src: client18, alt: "Client " },
-        { id: 43, src: client19, alt: "Client " },
+        // { id: 40, src: client16, alt: "Client " },
+        // { id: 41, src: client17, alt: "Client " },
+        // { id: 42, src: client18, alt: "Client " },
+        // { id: 43, src: client19, alt: "Client " },
     ],
 };
 const fadeInUp = {
