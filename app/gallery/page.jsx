@@ -36,6 +36,12 @@ import image17 from "@/Images/Technology-Trial-Run/e1.jpg"
 import image18 from "@/Images/Technology-Trial-Run/e2.jpg"
 import image19 from "@/Images/Technology-Trial-Run/e3.jpg"
 import image20 from "@/Images/Technology-Trial-Run/e4.jpg"
+import imagee5 from "@/Images/Technology-Trial-Run/e5.jpg"
+import imagee6 from "@/Images/Technology-Trial-Run/e6.jpg"
+import imagee7 from "@/Images/Technology-Trial-Run/e7.jpg"
+import imagee8 from "@/Images/Technology-Trial-Run/e8.jpg"
+import imagee9 from "@/Images/Technology-Trial-Run/e9.jpg"
+
 
 //clients 
 
@@ -101,33 +107,39 @@ const galleryData = {
         { id: 18, src: image18, alt: "Tech Trial 2" },
         { id: 19, src: image19, alt: "Tech Trial 3" },
         { id: 20, src: image20, alt: "Tech Trial 4" },
+        { id: 21, src: imagee5, alt: "Tech Trial 5" },
+        { id: 22, src: imagee6, alt: "Tech Trial 6" },
+        { id: 23, src: imagee7, alt: "Tech Trial 7" },
+        { id: 24, src: imagee8, alt: "Tech Trial 8" },
+        { id: 25, src: imagee9, alt: "Tech Trial 9" },
     ],
     "Valuable Clients": [
-        { id: 21, src: image21, alt: "Client " },
-        { id: 22, src: image22, alt: "Client " },
-        { id: 23, src: image23, alt: "Client " },
-        { id: 24, src: image24, alt: "Client " },
-        { id: 25, src: client1, alt: "Client " },
-        // { id: 26, src: client2, alt: "Client " },
-        // { id: 27, src: client3, alt: "Client " },
-        { id: 28, src: client4, alt: "Client " },
-        { id: 29, src: client5, alt: "Client " },
-        // { id: 30, src: client6, alt: "Client " },
-        // { id: 31, src: client7, alt: "Client " },
-        { id: 32, src: client8, alt: "Client " },
-        // { id: 33, src: client9, alt: "Client " },
-        // { id: 34, src: client10, alt: "Client " },
-        { id: 35, src: client11, alt: "Client " },
-        { id: 36, src: client12, alt: "Client " },
-        // { id: 37, src: client13, alt: "Client " },
-        // { id: 38, src: client14, alt: "Client " },
-        { id: 39, src: client15, alt: "Client " },
-        // { id: 40, src: client16, alt: "Client " },
-        // { id: 41, src: client17, alt: "Client " },
-        // { id: 42, src: client18, alt: "Client " },
-        // { id: 43, src: client19, alt: "Client " },
+        { id: 26, src: image21, alt: "Client " },
+        { id: 27, src: image22, alt: "Client " },
+        { id: 28, src: image23, alt: "Client " },
+        { id: 29, src: image24, alt: "Client " },
+        { id: 30, src: client1, alt: "Client " },
+        // { id: 31, src: client2, alt: "Client " },
+        // { id: 32, src: client3, alt: "Client " },
+        { id: 33, src: client4, alt: "Client " },
+        { id: 34, src: client5, alt: "Client " },
+        // { id: 35, src: client6, alt: "Client " },
+        // { id: 36, src: client7, alt: "Client " },
+        { id: 37, src: client8, alt: "Client " },
+        // { id: 38, src: client9, alt: "Client " },
+        // { id: 39, src: client10, alt: "Client " },
+        { id: 40, src: client11, alt: "Client " },
+        { id: 41, src: client12, alt: "Client " },
+        { id: 42, src: client13, alt: "Client " },
+        { id: 43, src: client14, alt: "Client " },
+        { id: 44, src: client15, alt: "Client " },
+        { id: 45, src: client16, alt: "Client " },
+        { id: 46, src: client17, alt: "Client " },
+        { id: 47, src: client18, alt: "Client " },
+        { id: 48, src: client19, alt: "Client " },
     ],
 };
+
 const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },

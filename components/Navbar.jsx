@@ -36,7 +36,7 @@ const navItems = [
   },
   {
     name: "Our Products",
-    href: "/products",
+    href: "/products/IVfluids",
     items: productItems,
     hasDropdown: true
   },
@@ -188,7 +188,7 @@ const Navbar = () => {
           : 'bg-background'
           } transition-all duration-500`}
       >
-        <div className="max-w-screen-xl mx-auto px-6 py-4">
+        <div className="max-w-screen-xl mx-auto px-0 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <motion.div
@@ -199,17 +199,17 @@ const Navbar = () => {
               <Link href="/">
                 <Image
                   src={logo}
-                  width={400}
-                  height={400}
+                  width={900}
+                  height={900}
                   alt="logo"
-                  className="w-56 h-10 sm:h-12"
+                  className="w-72 h-10 sm:h-12"
                   priority
                 />
               </Link>
             </motion.div>
 
             {/* Desktop Menu */}
-            <div className="hidden lg:flex items-center gap-8">
+            <div className="hidden lg:flex items-center gap-5">
               {navItems.map((item) => {
                 const isActive = item.hasDropdown
                   ? isDropdownActive(item.items) || isLinkActive(item.href)
