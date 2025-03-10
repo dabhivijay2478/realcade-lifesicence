@@ -13,10 +13,10 @@ const productItems = [
   { name: "I.V. Fluids", href: "/products/IVfluids" }
 ];
 
-const manufacturing = [
-  { name: "Manufacturing Unit 1", href: "/manufacturing/manufacturing-unit-1" },
-  { name: "Manufacturing Unit 2", href: "/manufacturing/manufacturing-unit-2" },
-];
+// const manufacturing = [
+//   { name: "Manufacturing Unit 1", href: "/manufacturing/manufacturing-unit-1" },
+//   { name: "Manufacturing Unit 2", href: "/manufacturing/manufacturing-unit-2" },
+// ];
 
 const contactInfo = [
   { icon: Phone, text: "+91 9825070417", href: "tel:+919825070417" },
@@ -28,12 +28,12 @@ const contactInfo = [
 const navItems = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
-  {
-    name: "Manufacturing Unit's",
-    href: "/manufacturing",
-    items: manufacturing,
-    hasDropdown: true
-  },
+  // {
+  //   name: "Manufacturing Unit's",
+  //   href: "/manufacturing",
+  //   items: manufacturing,
+  //   hasDropdown: true
+  // },
   {
     name: "Our Products",
     href: "/products/IVfluids",
