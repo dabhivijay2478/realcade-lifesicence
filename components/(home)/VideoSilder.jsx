@@ -60,7 +60,7 @@ const VideoHeroSlider = () => {
     const items = [
         {
             videoUrl: "/videos/silde1.mp4",
-            title: "RealCade LifeScience",
+            title: "Realcade Lifescience Pvt. Ltd.",
             subtitle: "Innovation to Implementation",
             description: "Design to Directives",
         },

@@ -62,10 +62,7 @@ const BlogPage = () => {
                             />
                         </div>
                         <CardContent className="p-6 flex flex-col justify-center">
-                            <div className="flex items-center gap-2 mb-2">
-                                <Award className="h-5 w-5 text-blue-600" />
-                                <p className="text-blue-600 font-semibold">FEATURED</p>
-                            </div>
+                           
                             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">
                                 State-of-the-Art Manufacturing Facility
                             </h2>

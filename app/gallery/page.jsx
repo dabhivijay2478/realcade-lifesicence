@@ -36,7 +36,7 @@ import image17 from "@/Images/Technology-Trial-Run/e1.jpg"
 import image18 from "@/Images/Technology-Trial-Run/e2.jpg"
 import image19 from "@/Images/Technology-Trial-Run/e3.jpg"
 import image20 from "@/Images/Technology-Trial-Run/e4.jpg"
-import imagee5 from "@/Images/Technology-Trial-Run/e5.jpg"
+// import imagee5 from "@/Images/Technology-Trial-Run/e5.jpg"
 import imagee6 from "@/Images/Technology-Trial-Run/e6.jpg"
 import imagee7 from "@/Images/Technology-Trial-Run/e7.jpg"
 import imagee8 from "@/Images/Technology-Trial-Run/e8.jpg"
@@ -107,7 +107,7 @@ const galleryData = {
         { id: 18, src: image18, alt: "Tech Trial 2" },
         { id: 19, src: image19, alt: "Tech Trial 3" },
         { id: 20, src: image20, alt: "Tech Trial 4" },
-        { id: 21, src: imagee5, alt: "Tech Trial 5" },
+        // { id: 21, src: imagee5, alt: "Tech Trial 5" },
         { id: 22, src: imagee6, alt: "Tech Trial 6" },
         { id: 23, src: imagee7, alt: "Tech Trial 7" },
         { id: 24, src: imagee8, alt: "Tech Trial 8" },

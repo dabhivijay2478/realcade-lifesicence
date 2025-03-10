@@ -292,7 +292,16 @@ export default function AboutUs() {
                 viewport={{ once: true }}
             >
                 <div className="container mx-auto px-6">
-                    <h2 className="text-4xl font-bold text-center mb-16 dark:text-green-600 text-blue-500 ">Our Strength</h2>
+                    <motion.h1
+                        className="mb-6 text-4xl text-center font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2, duration: 0.5 }}
+                    >
+                        <span className="block w-full text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-500 lg:inline">
+                            Our Strength
+                        </span>
+                    </motion.h1>
                     <div className="container mx-auto px-4 py-12">
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -389,9 +398,17 @@ export default function AboutUs() {
                         variants={fadeIn}
                         className=" rounded-xl p-8 shadow-lg mb-20"
                     >
-                        <h3 className="text-2xl font-bold mb-8 text-center dark:text-green-600 text-blue-500">
-                            Global Presence
-                        </h3>
+                        <motion.h1
+                            className="mb-6 text-4xl text-center font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.2, duration: 0.5 }}
+                        >
+                            <span className="block w-full text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-500 lg:inline">
+                                Global Presence
+                            </span>
+                        </motion.h1>
+
                         <div className="grid md:grid-cols-2 gap-8">
                             <div>
                                 <h4 className="text-xl font-semibold mb-4 dark:text-green-600 text-blue-500">
@@ -439,7 +456,16 @@ export default function AboutUs() {
                         variants={fadeIn}
                         className="text-center"
                     >
-                        <h3 className="text-4xl font-bold mb-8 text-emerald-600 dark:text-emerald-400 ">Company Growth</h3>
+                        <motion.h1
+                            className="mb-6 text-4xl text-center font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.2, duration: 0.5 }}
+                        >
+                            <span className="block w-full text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-500 lg:inline">
+                                Company Growth
+                            </span>
+                        </motion.h1>
                         <div className="relative w-full aspect-[16/9] sm:aspect-[16/10] md:aspect-[16/8] lg:aspect-[16/7] rounded-lg overflow-hidden ">
                             <ReactPlayer
                                 url="/videos/dataanalysischart.mp4"
