@@ -1,12 +1,12 @@
 import nodemailer from 'nodemailer';
 
 const transporter = nodemailer.createTransport({
-    service: "Gmail",
-    host: process.env.RSEND_HOST,
-    port: process.env.RSEND_PORT,
+    host: 'smtp.hostinger.com',
+    port: 465,
+    secure: true, // Use SSL/TLS
     auth: {
-        user: process.env.RSEND_USERNAME,
-        pass: process.env.RSEND_PASSWORD
+      user: 'support@realcadelifescience.com',
+      pass: '#q7S@IXKK2A'
     }
 });
 
@@ -27,8 +27,8 @@ export async function POST(request) {
 
         // Email template
         const mailOptions = {
-            from: process.env.RSEND_USERNAME,
-            to: 'realcadelifescience@gmail.com', // Replace with your target email
+            from: 'support@realcadelifescience.com',
+            to: 'realcadelifescience@gmail.com', 
             subject: `New Contact Form Submission from ${firstName} ${lastName}`,
             html: `
                 <!DOCTYPE html>

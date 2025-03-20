@@ -41,16 +41,12 @@ const certificates = [
 const kadiLicenses = [
     {
         title: 'WHO GMP',
-        validUntil: 'UP TO 24 JUL 2025',
-        status: 'Under Approval',
         description: 'World Health Organization Good Manufacturing Practice certification for pharmaceutical manufacturing.',
         pdfPath: "/who-kadi.pdf"
     },
     {
-        title: 'ISO 9001:2015',
-        validUntil: 'UP TO 05 APR 2025',
-        status: 'Active',
-        description: 'International standard for quality management systems, ensuring consistent quality products.',
+        title: 'RLC of Mfg',
+        description: 'Retention of Licence to manufacture for sale of [Large Volume Parenterals / Sera and vaccine / Recombinant DNA (r-DNA) derived drugs] subs by G.S.R. 26(E) dated 19.01.2006 specified in Schedules C and C(1) excluding those specified in Schedule X',
         pdfPath: "/mfg-kadi.pdf"
     },
 ]
@@ -58,17 +54,13 @@ const kadiLicenses = [
 // Valod facility licenses
 const valodLicenses = [
     {
-        title: 'MFG. LIC. - 28D',
-        validUntil: 'UP TO 16 OCT 2026',
-        status: 'Active',
-        description: 'Manufacturing license for pharmaceutical production at our Valod facility.',
+        title: 'WHO GMP',
+        description: 'World Health Organization Good Manufacturing Practice certification for pharmaceutical manufacturing.',
         pdfPath: "/who-lic-valod.pdf"
     },
     {
-        title: 'IVORY COAST',
-        validUntil: 'UP TO 07 OCT 2024',
-        status: 'Active',
-        description: 'Export license for pharmaceutical products to Ivory Coast and West African markets.',
+      title: 'RLC of Mfg',
+      description: 'Retention of Licence to manufacture for sale of [Large Volume Parenterals / Sera and vaccine / Recombinant DNA (r-DNA) derived drugs] subs by G.S.R. 26(E) dated 19.01.2006 specified in Schedules C and C(1) excluding those specified in Schedule X',
         pdfPath: "/mfg-valod.pdf"
     },
 ]
@@ -119,7 +111,7 @@ const CertificateCard = ({ cert }) => {
           </div>
           
           <div className="space-y-2">
-            <h3 className="text-lg font-semibold text-center text-gray-800">
+            <h3 className="text-lg font-semibold text-center ">
               {cert.name}
             </h3>
           </div>
@@ -149,11 +141,6 @@ const LicenseCard = ({ license, isEven }) => {
               {license.title}
             </h3>
           </div>
-          
-          <p className="text-sm font-medium dark:text-white mb-3">
-            Valid: <span className="dark:text-white">{license.validUntil}</span>
-          </p>
-          
           <p className="text-sm dark:text-white mb-4">
             {license.description}
           </p>
