@@ -214,7 +214,7 @@ export default function AboutUs() {
                                     <span className="font-semibold dark:text-green-600 text-blue-500 text-lg md:text-xl">
                                         RealCade LifeScience Pvt. Ltd
                                     </span>
-                                    ., located in Kadi-Mehsana, Gujarat, is emerging as one of India's leading manufacturers of sterile liquids, specializing in advanced Aseptic Form-Fill-Seal (FFS) Technology. Our cutting-edge manufacturing facilities allow us to produce IV Fluids in 100 ml and 500 ml volumes, along with a diverse product range that includes Formulations, Fluid Therapy, Respiratory Solutions, Diluents, and Injections. We are dedicated to maintaining the highest quality standards to meet global pharmaceutical regulations.
+                                    ., located in Kadi-Mehsana, Gujarat, is emerging as one of India&#39;s leading manufacturers of sterile liquids, specializing in advanced Aseptic Form-Fill-Seal (FFS) Technology. Our cutting-edge manufacturing facilities allow us to produce IV Fluids in 100 ml and 500 ml volumes, along with a diverse product range that includes Formulations, Fluid Therapy, Respiratory Solutions, Diluents, and Injections. We are dedicated to maintaining the highest quality standards to meet global pharmaceutical regulations.
                                 </p>
                                 <p className="leading-relaxed tracking-normal md:tracking-wide break-words hyphens-auto">
                                     As a leader in IV Parenteral Formulations, RealCade LifeScience focuses on innovation, quality, and customer satisfaction. Our expert team and advanced facilities ensure the reliable, safe production of life-saving solutions that cater to healthcare needs worldwide.
@@ -274,12 +274,12 @@ export default function AboutUs() {
                             </h1>
                             <div className="space-y-4 md:space-y-6 text-gray-800 dark:text-white/90 text-left md:text-justify text-base md:text-lg mt-3 max-w-full px-2 md:px-0">
                                 <p className="leading-relaxed tracking-normal md:tracking-wide break-words hyphens-auto">
-                                    <span className="font-semibold dark:text-blue-600 text-green-500">Bharat Vihol</span> is the Director of <span className="font-semibold dark:text-green-600 text-blue-500">Realcade Lifescience Pvt. Ltd.</span>, brings over 25 years of expertise in BFS and FFS technology for IV Fluids and Pharmaceutical Formulations. His deep knowledge of plant development, machinery installation, and IV Fluid projects has been instrumental in the company's growth, making Realcade a leader in oral, injectable, and respiratory solutions.
+                                    <span className="font-semibold dark:text-blue-600 text-green-500">Bharat Vihol</span> is the Director of <span className="font-semibold dark:text-green-600 text-blue-500">Realcade Lifescience Pvt. Ltd.</span>, brings over 25 years of expertise in BFS and FFS technology for IV Fluids and Pharmaceutical Formulations. His deep knowledge of plant development, machinery installation, and IV Fluid projects has been instrumental in the company&#39;s growth, making Realcade a leader in oral, injectable, and respiratory solutions.
                                 </p>
                             </div>
                             <div className="text-base md:text-lg mt-3 text-left md:text-justify max-w-full px-2 md:px-0">
                                 <p className="leading-relaxed tracking-normal md:tracking-wide break-words hyphens-auto">
-                                    Under his leadership, Realcade Lifescience has risen to prominence in sterile liquid manufacturing, consistently driving innovation, efficiency, and quality. Bharat's commitment to excellence and customer satisfaction has ensured Realcade's continued success and positioned the company at the forefront of the pharmaceutical industry.
+                                    Under his leadership, Realcade Lifescience has risen to prominence in sterile liquid manufacturing, consistently driving innovation, efficiency, and quality. Bharat&#39;s commitment to excellence and customer satisfaction has ensured Realcade&#39;s continued success and positioned the company at the forefront of the pharmaceutical industry.
                                 </p>
                             </div>
                         </motion.div>

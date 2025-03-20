@@ -193,7 +193,7 @@ const LandingPage = () => {
                                     <span className="font-semibold dark:text-blue-600 text-green-500">
                                         Realcade Lifescience Pvt. Ltd.
                                     </span>{" "}
-                                    having up Corporate office Manufacturing Unit 1 Located at Kadi-Mehsana, Gujarat, and with an additional Manufacturing Unit 2 Located at Valod -Tapi, Gujarat, we are India's foremost manufacturer of sterile liquids, specializing in cutting-edge Aseptic Form-Fill-Seal (FFS) Technology. Since our establishment in 2013, we have continually raised the bar in pharmaceutical manufacturing, delivering excellence in every aspect of production. Our unwavering commitment to innovation, quality, and precision has firmly established us as a trusted leader in the industry.
+                                    having up Corporate office Manufacturing Unit 1 Located at Kadi-Mehsana, Gujarat, and with an additional Manufacturing Unit 2 Located at Valod -Tapi, Gujarat, we are India&#39;s foremost manufacturer of sterile liquids, specializing in cutting-edge Aseptic Form-Fill-Seal (FFS) Technology. Since our establishment in 2013, we have continually raised the bar in pharmaceutical manufacturing, delivering excellence in every aspect of production. Our unwavering commitment to innovation, quality, and precision has firmly established us as a trusted leader in the industry.
                                 </p>
                                 <div className="flex flex-wrap gap-4">
                                     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
