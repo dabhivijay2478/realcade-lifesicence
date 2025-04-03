@@ -185,7 +185,7 @@ const LandingPage = () => {
                                 <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
                                     Welcome to
                                     <span className="block  dark:text-blue-600 text-green-500">
-                                        RealCade LifeScience
+                                        Realcade Lifescience
                                     </span>
                                 </h1>
 

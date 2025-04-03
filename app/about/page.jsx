@@ -206,7 +206,7 @@ export default function AboutUs() {
                             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
                                 Welcome to
                                 <span className="block  dark:text-blue-600 text-green-500">
-                                    RealCade LifeScience
+                                    Realcade Lifescience
                                 </span>
                             </h1>
                             <div className="space-y-4 md:space-y-6 text-gray-800 dark:text-white/90 text-left md:text-justify text-base md:text-lg mt-3 max-w-full px-2 md:px-0">
